@@ -1,4 +1,4 @@
-[Introduction](https://mal5482.github.io/2018CS109A_FinalProject_G18/) | [Literature Review](https://mal5482.github.io/2018CS109A_FinalProject_G18/Review)|[EDA](https://mal5482.github.io/2018CS109A_FinalProject_G18/EDA) | [Models](https://mal5482.github.io/2018CS109A_FinalProject_G18/Models) | [Summary](https://mal5482.github.io/2018CS109A_FinalProject_G18/Summary) | [Reference](https://mal5482.github.io/2018CS109A_FinalProject_G18/Reference)
+[Introduction](https://mal5482.github.io/2018CS109A_FinalProject_G18/) | [Literature Review](https://mal5482.github.io/2018CS109A_FinalProject_G18/Review/)|[EDA](https://mal5482.github.io/2018CS109A_FinalProject_G18/EDA/) | [Models](https://mal5482.github.io/2018CS109A_FinalProject_G18/Models/) | [Summary](https://mal5482.github.io/2018CS109A_FinalProject_G18/Summary/) | [Reference](https://mal5482.github.io/2018CS109A_FinalProject_G18/Reference/)
 
 # Predictive model for early diagnosis of Alzheimer's Disease using ADNI Databse
 ### Group 18 | Man Liu, Xinan Wang
