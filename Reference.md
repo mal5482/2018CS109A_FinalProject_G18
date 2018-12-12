@@ -29,7 +29,7 @@
 1. Morris JC. The Clinical Dementia Rating (CDR): current version and scoring rules. Neurology. 1993;43(11):2412–2414. 
 1. Morris JC, Ernesto C, Schafer K, et al. Clinical dementia rating training and reliability in multicenter studies: the Alzheimer's Disease Cooperative Study experience. Neurology. 1997;48(6):1508–1510.
 1. Burke WJ, Miller JP, Rubin EH, et al. Reliability of the Washington University Clinical Dementia Rating. Arch Neurol. 1988;45(1):31–32. 
-30) Berg L, McKeel DW, Jr, Miller JP, Baty J, Morris JC. Neuropathological indexes of Alzheimer's disease in demented and nondemented persons aged 80 years and older. Arch Neurol. 1993;50(4):349–358. 
+1. Berg L, McKeel DW, Jr, Miller JP, Baty J, Morris JC. Neuropathological indexes of Alzheimer's disease in demented and nondemented persons aged 80 years and older. Arch Neurol. 1993;50(4):349–358. 
 1. Morris JC, McKeel DW, Jr, Storandt M, et al. Very mild Alzheimer's disease: informant-based clinical, psychometric, and pathologic distinction from normal aging. Neurology. 1991;41(4):469–478. 
 1. Morris JC, Storandt M, McKeel DW, Jr, et al. Cerebral amyloid deposition and diffuse plaques in “normal” aging: evidence for presymptomatic and very mild Alzheimer's disease. Neurology. 1996;46(3):707–719. 
 1. Grundman M, Petersen RC, Ferris SH, et al. Mild cognitive impairment can be distinguished from Alzheimer disease and normal aging for clinical trials. Arch Neurol. 2004;61(1):59–66. 
