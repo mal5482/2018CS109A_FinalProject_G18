@@ -139,7 +139,7 @@ for i in range(2):
 **Variable Selection:
 We select Age, Gender and Marital Status as potential predictors.**
 
-## <a name="Lifestyle-factors"></a> c. Lifestyle factors (from medical history dataset)
+## <a name="Lifestyle-factors"></a> 3) Lifestyle factors (from medical history dataset)
 ```py
 plt.figure(figsize=(18,6))
 
@@ -169,11 +169,11 @@ plt.ylabel('Count') ;
 We select Baseline smoking as potential predictor.**
 
 
-## <a name="Neurocognitive/neuropsychological-assessments"></a> d. Neurocognitive/neuropsychological assessments
+## <a name="Neurocognitive/neuropsychological-assessments"></a> 4) Neurocognitive/neuropsychological assessments
 
 For neurocognitive/neuropsychological predictors, we first plot their histogram, second present their boxplot within each baseline diagnosis group, then calculate their correlations.
 
-### <a name="1. Histogram"></a> 1. Histogram
+### <a name="1. Histogram"></a> a. Histogram
 
 ```py
 # plot the histogram of these predictors:
@@ -202,7 +202,7 @@ for i in range(len(neu_predictors)):
     axn1[i].set_ylabel('Frequency',fontsize=14)
 ```
 ![Neuro](/images/Neuro.png)
-### <a name="Box plots and count plots with Outcomes"></a> 2. Box plots and count plots with Outcomes
+### <a name="Box plots and count plots with Outcomes"></a> b. Box plots and count plots with Outcomes
 ```py
 # plot the boxplot of these predictors versus baseline diagnosis:
 
@@ -222,7 +222,7 @@ for i in range(len(neu_predictors)):
 There is apparent association between baseline diagnosis and baseline MMSE score, RAVLT scores (learning), RAVLT scores (immediate recall), RAVLT scores (percent forgeting), AVLT Delayed Recognition score, Baseline ADAS11, Baseline ADAS13, Trail making test B score, Clinical Dementia Rating score, FAQ score. Only RAVLT scores (forgetting) and Trail making test A score seem to have no difference within different baseline diagnosis group.
 
  
-### <a name="3. Correlation matrix"></a> 3.Correlation matrix
+### <a name="3. Correlation matrix"></a> c. Correlation matrix
  ```py
   # Correlations between neuropsychological measures
 data_neuro_corr = data_neuro.drop(columns='DX_bl')
@@ -243,11 +243,11 @@ We should include variables that has different distribution within different bas
 For the highly correlated variables, for instance, ADAS11 and ADAS13, CDRSB and FAQ, we should furthur look into them and include only one within the pairs to avoid colinearity.**
 
 
-## <a name="Cerebrospinal-fluid-(CSF)-Biomarkers"></a> e. Cerebrospinal fluid (CSF) Biomarkers
+## <a name="Cerebrospinal-fluid-(CSF)-Biomarkers"></a> 5) Cerebrospinal fluid (CSF) Biomarkers
 
 For Cerebrospinal fluid (CSF) Biomarkers, we first plot their histogram, second present their boxplot within each baseline diagnosis group, then calculate their correlations.
 
-### <a name="1.Histogram"></a> 1.Histogram
+### <a name="1.Histogram"></a> a. Histogram
 ```py
  # recode these three variable
 biomkr_df = data_train[['DX_bl','ABETA_bl','TAU_bl','PTAU_bl']].dropna()
@@ -287,7 +287,7 @@ for i in range(3):
 ```
 ![Imaging](/images/image.png)
 
-### <a name="2.Box plot"></a> 2.Box plot
+### <a name="2.Box plot"></a> b. Box plot
  ```py
  ## <a name="2.Box plot"></a> 2.Box plot
  ## <a name="2.Box plot"></a> 2.Box plot
@@ -305,7 +305,7 @@ for i in range(len(biomkr_df_colunms)):
 **Interpretation**
 Based on the boxplot, all the three variables seem to be correlated with baseline diagnosis. We could consider to include them.
 
-### <a name="3.Correlation matrix"></a> 3.Correlation matrix
+### <a name="3.Correlation matrix"></a> c. Correlation matrix
 ```py
 biomkr_df_corr = biomkr_df.drop(columns='DX_bl')
 corr_b = pd.DataFrame(np.corrcoef(biomkr_df_corr.T))
@@ -324,8 +324,8 @@ TAU and PTAU are clearly highly correlated. We should only include one of them. 
 **Variable Selection:
 We may include ABETA and TAU as potential predictors.**
 
-## <a name="Imaging-factors"></a>f. Imaging factors
-### <a name="1.Histogram"></a> 1.Histogram
+## <a name="Imaging-factors"></a> 6) Imaging factors
+### <a name="1.Histogram"></a> a. Histogram
 ```py
 img_columns = ['Ventricles_bl','Hippocampus_bl','WholeBrain_bl','Entorhinal_bl','Fusiform_bl','MidTemp_bl']
 img_df = data_train[['DX_bl'] + img_columns].dropna()
@@ -344,7 +344,7 @@ for i in range(6):
 **Interpretation**
 All the six imaging brain features are pretty normally distributed, except for the Ventricles_bl. We may need to consider to transform it later in analysis.
 
-### <a name="2.Box plot"></a> 2.Box plot
+### <a name="2.Box plot"></a> b. Box plot
 ```py
 fig, axi2 = plt.subplots(2,3,figsize=(20,10))
 fig.suptitle('Imaging Brain Factors vs. Baseline Diagnosis', fontsize=20)
@@ -360,7 +360,7 @@ for i in range(len(img_columns)):
 **Interpretation**
 Based on the boxplot, we could see that baseline Hippocampus volume and Entorhinal volume is apparently associated with baseline diagnosis. The other four features seem to have different distribution in AD diagnosis but but no in CN and LMCI.
 
-### <a name="3.Correlation matrix"></a> 3.Correlation matrix
+### <a name="3.Correlation matrix"></a> c. Correlation matrix
 ```py
 img_df_corr = img_df.drop(columns='DX_bl')
 corr_i = pd.DataFrame(np.corrcoef(img_df_corr.T))
@@ -378,7 +378,7 @@ The imaging Brain features are not very correlated with each other. The highest 
 **Variable Selection:
 We may include Hippocampus_bl, Entorhinal_bl, Ventricles_bl, MidTemp_bl into analysis.**
 
-## <a name="Genetic-factors"></a>g. Genetic factors
+## <a name="Genetic-factors"></a> 7) Genetic factors
 ```py
 # APOE status vs. Baseline Diagnosis
 data_apoe = data_train[['APOE4','DX_bl']]
@@ -395,6 +395,7 @@ APOE4 Status: The APOE4 status seems to be associated with baseline diagnosis, b
 **Variable Selection:
 We select APOE4 Status as potential predictor.**
 ---
+
 ## <a name="Summary"></a> 3. Summary
 
 Based on the EDA above, we may first include the following variables as potential predictors for modeling:
