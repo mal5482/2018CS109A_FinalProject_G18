@@ -6,7 +6,7 @@
 * [1. Summary](#summary)<br>
 * [2. Results](#results)<br>
 * [3. Discussion](#discussion)<br> 
-
+---
 ## <a name="summary"></a> 1. Summary
 In our project, we first select potential predictors based on both literature review and EDA results. Then we built eight classification models to predict the baseline diagnosis status of an individual given his predictors patterns. For each model, we used three different imputation methods: directly drop missing, mean imputation, and regression imputation. We also tried two types of regularization, Ridge and Lasso. We selected our best prediction model based on the performance on test set.
 
