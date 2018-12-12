@@ -9,6 +9,8 @@
 * [2. Classification](#classification)<br>
 	* [0) Principle Component Analysis (PCA)](#pca)<br>
 	* [1) Multinomial Logistic Modeling](#logistic)<br>
+		* [a) Ridge Regularization](#ridge)<br>
+		* [b) Lasso Regularization](#lasso)<br>
 	* [2) Linear discriminant analysis (LDA)](#lda)<br>
 	* [3) Quadratic Discriminant Analysis (QDA)](#qda)<br>
 	* [4) k-NN](#knn)<br>
@@ -313,13 +315,16 @@ for i in range(3):
 ![Cumulative explained variance](/images/pca2.png)
 
 ### <a name="logistic"></a> 1) Multinomial Logistic Modeling
+**We used two regularization methods to run the model: Ridge and Lasso. They could help us to better understand the importance of features in different settings.**
+
+#### <a name="ridge"></a> a) Multinomial Logistic - Ridge Regularization
 
 ```py
-# Multinomial logistic model
-logi_accs_train = []
-logi_accs_test = []
-logi_cvscores = []
-logi_models = []
+# Multinomial logistic model using ridge regularization
+logi_accs_train_r = []
+logi_accs_test_r = []
+logi_cvscores_r = []
+logi_models_r = []
 
 for i in range(3):
     X_train = X_trains[i]
@@ -327,28 +332,28 @@ for i in range(3):
     X_test = X_tests[i]
     y_test = y_tests[i]
     
-    logi_model = LogisticRegressionCV\
+    logi_model_r = LogisticRegressionCV\
         (random_state=0, cv=5, penalty='l2', multi_class="auto", solver='lbfgs', max_iter=100).fit(X_train,y_train)
-    logi_models.append(logi_model)
+    logi_models_r.append(logi_model_r)
     
     # cross validation scores
-    logi_cvscore = cross_val_score(logi_model, X_train, y_train, cv=5)
-    logi_cvscores.append(logi_cvscore)
+    logi_cvscore_r = cross_val_score(logi_model_r, X_train, y_train, cv=5)
+    logi_cvscores_r.append(logi_cvscore_r)
     
     # train and test accuracy of logistic regression
-    logi_acc_train = logi_model.score(X_train, y_train)
-    logi_acc_test = logi_model.score(X_test, y_test)
-    logi_accs_train.append(logi_acc_train)
-    logi_accs_test.append(logi_acc_test)
+    logi_acc_train_r = logi_model_r.score(X_train, y_train)
+    logi_acc_test_r = logi_model_r.score(X_test, y_test)
+    logi_accs_train_r.append(logi_acc_train_r)
+    logi_accs_test_r.append(logi_acc_test_r)
 ```
 ```py
-# cross validation scores and accuracy
+# cross validation scores and accuracy using ridge regularization
 for i in range(3):
     print('({})'.format(labels[i]))
-    print('Cross Validation Score of Multinomial Logistic Model: ', logi_cvscores[i])
-    print('Mean of CV Score of Multinomial Logistic Model: {:.4f}' .format(logi_cvscores[i].mean()))
-    print('Training accuracy: %.4f' % logi_accs_train[i])
-    print('Test accuracy: %.4f' % logi_accs_test[i], '\n')
+    print('Cross Validation Score of Multinomial Logistic Model: ', logi_cvscores_r[i])
+    print('Mean of CV Score of Multinomial Logistic Model: {:.4f}' .format(logi_cvscores_r[i].mean()))
+    print('Training accuracy: %.4f' % logi_accs_train_r[i])
+    print('Test accuracy: %.4f' % logi_accs_test_r[i], '\n')
 ```
 ```Markdown
 (Drop Missing)
@@ -369,6 +374,96 @@ Mean of CV Score of Multinomial Logistic Model: 0.8710
 Training accuracy: 0.9496
 Test accuracy: 0.9099 
 ```
+#### <a name="lasso"></a> b) Multinomial Logistic - Lasso Regularization
+```py
+# Multinomial logistic model using ridge regularization
+logi_accs_train_l = []
+logi_accs_test_l = []
+logi_cvscores_l = []
+logi_models_l = []
+
+for i in range(3):
+    X_train = X_trains[i]
+    y_train = y_trains[i]
+    X_test = X_tests[i]
+    y_test = y_tests[i]
+    
+    logi_model_l = LogisticRegressionCV\
+        (random_state=0, cv=5, penalty='l1', multi_class="auto", solver='saga', max_iter=100).fit(X_train,y_train)
+    logi_models_l.append(logi_model_l)
+    
+    # cross validation scores
+    logi_cvscore_l = cross_val_score(logi_model_l, X_train, y_train, cv=5)
+    logi_cvscores_l.append(logi_cvscore_l)
+    
+    # train and test accuracy of logistic regression
+    logi_acc_train_l = logi_model_l.score(X_train, y_train)
+    logi_acc_test_l = logi_model_l.score(X_test, y_test)
+    logi_accs_train_l.append(logi_acc_train_l)
+    logi_accs_test_l.append(logi_acc_test_l)
+```
+```py
+# cross validation scores and accuracy using lasso regularization
+for i in range(3):
+    print('({})'.format(labels[i]))
+    print('Cross Validation Score of Multinomial Logistic Model: ', logi_cvscores_l[i])
+    print('Mean of CV Score of Multinomial Logistic Model: {:.4f}' .format(logi_cvscores_l[i].mean()))
+    print('Training accuracy: %.4f' % logi_accs_train_l[i])
+    print('Test accuracy: %.4f' % logi_accs_test_l[i], '\n')
+```
+```Markdown
+(Drop Missing)
+Cross Validation Score of Multinomial Logistic Model:  [0.9047619  0.85714286 0.85714286 0.95121951 0.92307692]
+Mean of CV Score of Multinomial Logistic Model: 0.8987
+Training accuracy: 0.9272
+Test accuracy: 0.9620 
+
+(Mean Imputation)
+Cross Validation Score of Multinomial Logistic Model:  [0.875      0.89285714 0.92857143 0.96428571 0.98148148]
+Mean of CV Score of Multinomial Logistic Model: 0.9284
+Training accuracy: 0.9388
+Test accuracy: 0.9279 
+
+(Regression Imputation)
+Cross Validation Score of Multinomial Logistic Model:  [0.83928571 0.89285714 0.92857143 0.96428571 0.98148148]
+Mean of CV Score of Multinomial Logistic Model: 0.9213
+Training accuracy: 0.9281
+Test accuracy: 0.9189 
+```
+**Let's look at the number of predictors kept in the model using lasso regularization.**
+```py
+# number of parameters of lasso CV
+lasso_coef = []
+for i in range(3):
+    lasso_coef_dict = {}
+    print("({}) Number of predictors: {}" .format(labels[i], np.sum(logi_models_l[i].coef_[0] != 0)))
+    for j in range(len(logi_models_l[i].coef_[0])):
+        lasso_coef_dict[j] = logi_models_l[i].coef_[0][j]
+    lasso_coef.append(lasso_coef_dict)
+```
+```Markdown
+(Drop Missing) Number of predictors: 9
+(Mean Imputation) Number of predictors: 8
+(Regression Imputation) Number of predictors: 8
+```
+**So we can see that the coefficients of many predictors are set to zero. Only up to 9 predictors are kept in the models. The results can be presented in the table below.**
+```python
+# regression coefficients in lasso regularization and corresponding predictors
+lasso_coef_df = pd.DataFrame(index=np.arange(19), 
+                             columns=['Predictors','Drop Missing', 'Mean Imputation','Regression Imputation'])
+lasso_coef_df['Predictors'] = predictors
+lasso_coef_df['Drop Missing'] = lasso_coef[0].values()
+lasso_coef_df['Mean Imputation'] = lasso_coef[1].values()
+lasso_coef_df['Regression Imputation'] = lasso_coef[2].values()
+lasso_coef_df
+```
+![lasso1](/images/lasso1.png)
+<p>
+**The predictors that are kept in every model with non-zero coefficients are:             
+MMSE_bl, RAVLT_immediate_bl, RAVLT_perc_forgetting_bl, ADAS13_bl, CDRSB_bl, ABETA_bl_n, TAU_bl_n, Hippocampus_bl.
+Among them, the first five predictors are from neurocognitive/neuropsychological assessments; ABETA_bl_n and TAU_bl_n are from cerebrospinal fluid (CSF) biomarkers; Hippocampus_bl is from imaging data.
+</p>
+
 **We looked at the prediction accuracy of the best model (using regression imputation) on each diagnosis label, and we found they still remained high**
 ```py
 # prediction accuracy of each label of regression imputation model
@@ -381,7 +476,6 @@ print(classification_report(y_tests[2], logi_models[2].predict(X_tests[2])))
            2           0.93                0.88
            3           0.95                0.91
 ```
-
 
 ### <a name="lda"></a> 2) Linear discriminant analysis (LDA)
 ```py
