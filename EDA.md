@@ -302,6 +302,7 @@ sns.heatmap(corr_b, cmap=dpal, annot=True, fmt=".2f", ax=axb3,
             xticklabels=biomkr_df_colunms, yticklabels=biomkr_df_colunms);
 ```
 ![Imaging_Heat](/images/image_Heat.png)
+
 **Interpretation**
 TAU and PTAU are clearly highly correlated. We should only include one of them. ABETA is weakly associated with the other two variables.
 
