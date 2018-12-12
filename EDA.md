@@ -1,19 +1,18 @@
 [Introduction](https://mal5482.github.io/ADNI-Alzheimer-Project/index)   |   [Literature Review](https://mal5482.github.io/ADNI-Alzheimer-Project/Review)   |   [**EDA**](https://mal5482.github.io/ADNI-Alzheimer-Project/EDA)   |   [Models](https://mal5482.github.io/ADNI-Alzheimer-Project/Models)   |   [Summary](https://mal5482.github.io/ADNI-Alzheimer-Project/Summary)   |   [Reference](https://mal5482.github.io/ADNI-Alzheimer-Project/Reference)
 
 # EDA
----
 ## Contents
-[0.Import Libraries](#Import-libraries)<br>
-[1.Load, Preprocess, Merge, and Split data](#Load-Preprocess-Merge-and-Split-data)<br>
-[2.Perform EDA to select potential predictors](#Perform-EDA-to-select-potential-predictors)<br>
-    -[a.)Demographics Characteristics](#Demographics-Characteristics)<br>
-    -[b.)Outcome: Baseline Diagnosis of Alzheimer's Disease](#Outcome-Baseline-Diagnosis-of-Alzheimer's-Disease)<br>
-    -[c.)Lifestyle factors (from medical history dataset)](#Lifestyle-factors)<br>
-    -[d.)Neurocognitive/neuropsychological assessments](#Cerebrospinal-fluid-(CSF)-Biomarkers)<br>
-    -[e.)Cerebrospinal fluid (CSF) Biomarkers](#Cerebrospinal-fluid-(CSF)-Biomarkers)<br>
-    -[f.)Imaging factors](#Imaging-factors)<br>
-    -[g.) Genetic factors](#Genetic-factors)<br>
-[3.Summary](#summary)<br> 
+* [0.Import Libraries](#Import-libraries)<br>
+* [1.Load, Preprocess, Merge, and Split data](#Load-Preprocess-Merge-and-Split-data)<br>
+* [2.Perform EDA to select potential predictors](#Perform-EDA-to-select-potential-predictors)<br>
+    * [a.)Demographics Characteristics](#Demographics-Characteristics)<br>
+    * [b.)Outcome: Baseline Diagnosis of Alzheimer's Disease](#Outcome-Baseline-Diagnosis-of-Alzheimer's-Disease)<br>
+    * [c.)Lifestyle factors (from medical history dataset)](#Lifestyle-factors)<br>
+    * [d.)Neurocognitive/neuropsychological assessments](#Cerebrospinal-fluid-(CSF)-Biomarkers)<br>
+    * [e.)Cerebrospinal fluid (CSF) Biomarkers](#Cerebrospinal-fluid-(CSF)-Biomarkers)<br>
+    * [f.)Imaging factors](#Imaging-factors)<br>
+    * [g.) Genetic factors](#Genetic-factors)<br>
+* [3.Summary](#summary)<br> 
 </ul>
 
 
