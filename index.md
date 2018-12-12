@@ -16,9 +16,8 @@ ADNI is a global research study that actively supports the investigation and dev
 Early diagnosis of AD or MCI is really important in the following aspects. First, it could revoke the attention of patients and their family so that additional levels of care and intervention could be given. Second, it could help  resource allocation and save time for specific and targeted treatment. Third, it would provide more insights on the treatment of other diseases or combination treatment since most of the AD patients are older than 65 years old and it is very likely they are simultaneously suffering other diseases. Therefore, the aim of this project is to build predictive model for early diagnosis using a wide range of predictors including socio-demographic, clinical, genetic, imaging characteristics, and biospecimen biomarkers.
 ![picture](/images/AD.png)
 
-## Problem Statement:
-How to early diagnosis disease status?
-
+## Research Question:
+How to diagnosis disease status at an early stage?
 1. Solve as a classification problem of classifying disease status, Cognitive Normal, Mild Cognitive Impariment (MCI) Alzheimer's Disease (AD) at an early stage using different classification methods and compare the performance to select an optimal model. 
 
 
