@@ -21,7 +21,7 @@ The Washington University Clinical Dementia Rating Scale (CDR) is a global asses
 Measurement of CDR:
 The CDR is obtained through semistructured interviews of patients and informants, and cognitive functioning is rated in 6 domains of functioning: memory, orientation, judgment and problem solving, community affairs, home and hobbies, and personal care. Each domain is rated on a 5-point scale of functioning as follows: 0, no impairment; 0.5, questionable impairment; 1, mild impairment; 2, moderate impairment; and 3, severe impairment (personal care is scored on a 4-point scale without a 0.5 rating available). The CDR-SOB score is obtained by summing each of the domain box scores, with scores ranging from 0 to 18. The CDR demonstrates good reliability11,12 and has been validated against neuropathologic finding13–15.
 
-## Research on CDR 
+## Previous Study on CDR 
 In previous research, the validity and relability of the CDR was assessed from a social behavior science prospect.
 
 *Cedarbaum JM, Jaros M, Hernandez C, Coley N, Andrieu S, Grundman M, Vellas B, Alzheimer's Disease Neuroimaging Initiative. Rationale for use of the Clinical Dementia Rating Sum of Boxes as a primary outcome measure for Alzheimer’s disease clinical trials. Alzheimer's & Dementia. 2013 Feb 1;9(1):S45-55.*
