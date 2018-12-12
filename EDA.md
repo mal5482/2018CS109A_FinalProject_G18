@@ -6,7 +6,7 @@
 * [0. Import Libraries](#Import-libraries)<br>
 * [1. Load, Preprocess, Merge, and Split data](#Load-Preprocess-Merge-and-Split-data)<br>
 * [2. Perform EDA to select potential predictors](#Perform-EDA-to-select-potential-predictors)<br>
-    * [1) Outcome: Baseline Diagnosis of Alzheimer's Disease](#Outcome-Baseline-Diagnosis-of-Alzheimer's-Disease)<br>
+    * [1) Outcome: Baseline Diagnosis of Alzheimer's Disease](#Outcome)<br>
     * [2) Demographics Characteristics](#Demographics-Characteristics)<br>
     * [3) Lifestyle factors (from medical history dataset)](#Lifestyle-factors)<br>
     * [4) Neurocognitive/neuropsychological assessments](#Cerebrospinal-fluid-(CSF)-Biomarkers)<br>
@@ -74,7 +74,7 @@ data_test.to_csv('data_test.csv')
 ```
 ---
 ## <a name="Perform-EDA-to-select-potential-predictors"></a> 2. Perform EDA to select potential predictors
-## <a name="Demographics-Characteristics"></a> 1) Outcome: Baseline Diagnosis of Alzheimer's Disease
+## <a name="Outcome"></a> 1) Outcome: Baseline Diagnosis of Alzheimer's Disease
 **The outcome of our study is baseline diagnosis status (categorical).**<br>
 **The full dataset include five categories:**<br>
 **CN**: NORMAL AGING/COGNITIVELY NORMAL (ADNI 1/GO/2/3 phase)<br>
