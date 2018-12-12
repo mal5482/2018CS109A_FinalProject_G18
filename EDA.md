@@ -14,8 +14,6 @@
     * [f.)Imaging factors](#Imaging-factors)<br>
     * [g.) Genetic factors](#Genetic-factors)<br>
 * [3.Summary](#summary)<br> 
-</ul>
-
 
 ## <a name="Import-libraries"></a> 0. Import libraries
 
