@@ -83,8 +83,8 @@ predictors = ['AGE','gender','married','MH16SMOK','MMSE_bl','RAVLT_learning_bl',
                     'Ventricles_bl','MidTemp_bl','APOE4']
 ```
 ### <a name="imputing-and-scaling-data"></a> 2) Imputing and Scaling Data
-**We used three imputation methods to impute missing data:**
-1. Deleting all missing in predictors
+**We used three methods to deal with missing data:**
+1. Deleting all missing in predictors (Drop missing)
 2. Mean imputation
 3. Regression imputation
 
