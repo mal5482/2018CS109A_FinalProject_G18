@@ -23,7 +23,7 @@
 	* [2) Decision tree with only CDRSB_bl](#cdrsb3)<br>
 	* [3) Decision tree and random forest without CDRSB_bl](#cdrsb4)<br>
 	
-
+---
 ## <a name="data-preparation"></a> 1. Data Preparation
 ### <a name="reading-and-cleaning-data"></a> 1) Reading and Cleaning Data
 
@@ -257,7 +257,7 @@ X_tests = [X_test1, X_test2, X_test3]
 y_tests = [y_test1, y_test2, y_test3]
 labels = ['Drop Missing', 'Mean Imputation', 'Regression Imputation']
 ```
-
+---
 ## <a name="classification"></a> 2.Classification
 ### <a name="pca"></a> 0) Principle Component Analysis (PCA)
 
@@ -466,8 +466,8 @@ MMSE_bl, RAVLT_immediate_bl, RAVLT_perc_forgetting_bl, ADAS13_bl, CDRSB_bl, ABET
 ABETA_bl_n and TAU_bl_n are from cerebrospinal fluid (CSF) biomarkers;<br>
 Hippocampus_bl is from imaging data.</p>**
 
-***Each Label Performance***
-We looked at the prediction accuracy of the best model (using regression imputation) on each diagnosis label, and we found they still remained high
+***Each Label Performance***<br>
+**We looked at the prediction accuracy of the best model on each diagnosis label, and we found they still remained high.**
 ```py
 # prediction accuracy of each label of regression imputation model
 print(classification_report(y_trains[2], logi_models_r[2].predict(X_trains[2])))
@@ -566,7 +566,8 @@ Training accuracy of QDA model: 0.9424
 Test accuracy of QDA model: 0.8739 
 ```
 
-**We looked at the prediction accuracy of the best model (using regression imputation) on each diagnosis label, and we found they still remained high**
+***Each Label Performance***<br>
+**We looked at the prediction accuracy of the best model on each diagnosis label, and we found they still remained high.**
 ```py
 # prediction accuracy of each label of regression imputation model
 print(classification_report(y_trains[2], lda_models[2].predict(X_trains[2])))
@@ -589,7 +590,7 @@ QDA:
 
 
 ### <a name="knn"></a> 4) k-NN
-**First, we fit multiple k-NN models on training set, and find the best number of k based on cross validation scores**
+**First, we fit multiple k-NN models on training set, and find the best number of k based on cross validation scores.**
 ```py
 #Fit knn models on training set
 fig, ax_knn = plt.subplots(1,3, figsize=(18,5))
@@ -621,7 +622,7 @@ for i in range(3):
 ```
 ![knn_cvscores](/images/knn.png)
 
-**Then we fit the best k-NN model for different imputation dataset**
+**Then we fit the best k-NN model for different imputation dataset.**
 ```py
 # fit the best kNN model for each dataset
 knn_accs_train = []
@@ -653,7 +654,8 @@ Training accuracy of k-NN model (k=10): 0.8237
 Test accuracy of k-NN model (k=10): 0.7928 
 ```
 
-**We looked at the prediction accuracy of the best model (using mean imputation) on each diagnosis label, and we found they still remained high**
+***Each Label Performance***<br>
+**We looked at the prediction accuracy of the best model on each diagnosis label, and we found they still remained high.**
 ```py
 # prediction accuracy of each label of mean imputation model
 print(classification_report(y_trains[1], knn_models[1].predict(X_trains[1])))
@@ -710,7 +712,7 @@ for i in range(3):
 ```
 ![dt_cvscores](/images/dt1.png)
 
-**Then we fit the best decision tree for different imputation dataset**
+**Then we fit the best decision tree for different imputation dataset.**
 ```py
 # Decision tree with depth = 2, 3, 4 for three datasets
 dt_models = []
@@ -743,7 +745,7 @@ Training accuracy of decision tree (max depth=4): 0.9460
 Test accuracy of decision tree (max depth=4): 0.9189 
 ```
 
-**We can have a look at the structure of each decision tree**
+**We can have a look at the structure of each decision tree.**
 ```py
 # This code is adapted from
 # http://scikit-learn.org/stable/auto_examples/tree/plot_unveil_tree_structure.html
@@ -932,7 +934,9 @@ Training accuracy of bagging with 50 trees (max depth=4): 0.9460
 Test accuracy of bagging with 50 trees (max depth=4): 0.9459
 Feature used most at the top node in bagging: 11 
 ```
-**We looked at the prediction accuracy of the best model (using regression imputation) on each diagnosis label, and we found they still remained high**
+
+***Each Label Performance***<br>
+**We looked at the prediction accuracy of the best model on each diagnosis label, and we found they still remained high.**
 ```py
 # prediction accuracy of each label of regression imputation model
 print(classification_report(y_trains[2], dt_models[2].predict(X_trains[2])))
@@ -1035,7 +1039,9 @@ Test accuracy of a random forest with 59 trees and max tree depth=3 is : 0.9369.
 Training accuracy of a random forest with 35 trees and max tree depth=4 is : 0.9532.
 Test accuracy of a random forest with 35 trees and max tree depth=4 is : 0.9640. 
 ```
-**We looked at the prediction accuracy of the best model (using regression imputation) on each diagnosis label, and we found they still remained high**
+
+***Each Label Performance***<br>
+**We looked at the prediction accuracy of the best model on each diagnosis label, and we found they still remained high.**
 ```py
 # prediction accuracy of each label of regression imputation model
 print(classification_report(y_trains[2], rf_models[2].predict(X_trains[2])))
@@ -1107,7 +1113,9 @@ Test accuracy of Ada boosting model with max tree depth=3 is : 0.9009.
 Training accuracy of Ada boosting model with max tree depth=4 is : 1.0000.
 Test accuracy of Ada boosting model with max tree depth=4 is : 0.8919. 
 ```
-**We looked at the prediction accuracy of the best model (using regression imputation) on each diagnosis label, and we found they still remained high, expect for the accuracy of the second label (AD).**
+
+***Each Label Performance***<br>
+**We looked at the prediction accuracy of the best model on each diagnosis label, and we found they still remained high, expect for the accuracy of the second label (AD).**
 ```py
 # prediction accuracy of each label of regression imputation model
 print(classification_report(y_trains[1], ada_models[1].predict(X_trains[1])))
@@ -1119,7 +1127,7 @@ print(classification_report(y_tests[1], ada_models[1].predict(X_tests[1])))
            2           0.81                0.78
            3           0.92                0.91
 ```
-
+---
 
 ## <a name="cdrsb1"></a> 3. Importance of CDRSB_bl
 
@@ -1179,6 +1187,7 @@ print('Test accuracy of single decision tree (max depth=3): %.4f' % dto_acc_test
 Training accuracy of single decision tree (max depth=2): 0.8993
 Test accuracy of single decision tree (max depth=2): 0.9099
 ```
+**The model with CDRSB_bl as the only predictor remains a pretty high predictin accuracy, which demonstrates the importance of CDRSB_bl in classifying the three diagnosis status at baseline.**
 
 ### <a name="cdrsb4"></a> 3) Decision tree and random forest without CDRSB_bl
 **We now look at the performace of other predictors when remove CDRSB_bl from the dataset.**
@@ -1337,4 +1346,4 @@ Test accuracy of a random forest with 26 trees and max tree depth=3 is : 0.7477.
 Training accuracy of a random forest with 52 trees and max tree depth=4 is : 0.8597.
 Test accuracy of a random forest with 52 trees and max tree depth=3 is : 0.7477. 
 ```
-
+**When we remove CDRSB_bl from the model, the performance dropped significantly, both training and test accuracy. The top three important features that showed in random forest models are MMSE_bl, ADAS13_bl, and RAVLT_immediate_bl. This is consistent with our finding in multinomial logistic regression using Lasso regularization.**
