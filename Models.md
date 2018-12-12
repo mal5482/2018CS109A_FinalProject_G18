@@ -458,11 +458,12 @@ lasso_coef_df['Regression Imputation'] = lasso_coef[2].values()
 lasso_coef_df
 ```
 ![lasso1](/images/lasso1.png)
-**<p>The predictors that are kept in every model with non-zero coefficients are:<br>           
+
+**<p>The predictors that are kept in every model with non-zero coefficients are:**           
 MMSE_bl, RAVLT_immediate_bl, RAVLT_perc_forgetting_bl, ADAS13_bl, CDRSB_bl, ABETA_bl_n, TAU_bl_n, Hippocampus_bl.<br>
 Among them, the first five predictors are from neurocognitive/neuropsychological assessments;<br>
 ABETA_bl_n and TAU_bl_n are from cerebrospinal fluid (CSF) biomarkers;<br>
-Hippocampus_bl is from imaging data.</p>**
+Hippocampus_bl is from imaging data.</p>
 
 **We looked at the prediction accuracy of the best model (using regression imputation) on each diagnosis label, and we found they still remained high**
 ```py
