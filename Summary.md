@@ -1,15 +1,14 @@
-[Introduction](https://mal5482.github.io/ADNI-Alzheimer-Project/index)   |   [Literature Review](https://mal5482.github.io/ADNI-Alzheimer-Project/Review)   |   [EDA](https://mal5482.github.io/ADNI-Alzheimer-Project/EDA)   |   [Models](https://mal5482.github.io/ADNI-Alzheimer-Project/Models)   |   [**Conclusion**](https://mal5482.github.io/ADNI-Alzheimer-Project/Summary)   |   [Reference](https://mal5482.github.io/ADNI-Alzheimer-Project/Reference)
+[Introduction](https://mal5482.github.io/ADNI-Alzheimer-Project/index)   |   [Literature Review](https://mal5482.github.io/ADNI-Alzheimer-Project/Review)   |   [EDA](https://mal5482.github.io/ADNI-Alzheimer-Project/EDA)   |   [Models](https://mal5482.github.io/ADNI-Alzheimer-Project/Models)   |   [**Results and Discussion**](https://mal5482.github.io/ADNI-Alzheimer-Project/Summary)   |   [Conclusion](https://mal5482.github.io/ADNI-Alzheimer-Project/Conclusion)   |   [Reference](https://mal5482.github.io/ADNI-Alzheimer-Project/Reference)
 
-# Conclusion and Discussion
+# Results and Discussion
 ---
 ## Contents
-* [1. Summary of analysis process](#summary)<br>
+* [1. Summary](#summary)<br>
 * [2. Results](#results)<br>
-* [3. Conclusion](#conclusion)<br> 
-* [4. Discussion](#suggestion)<br> 
+* [3. Discussion](#discussion)<br> 
 
-## <a name="summary"></a> 1. Summary of analysis process
-In our project, we first select potential predictors based on both literature review and EDA results. Then we built eight classification models to predict the baseline diagnosis status of an individual given his predictors patterns. For each model, we used three different imputation methods: directly drop missing, mean imputation, and regression imputation. We selected the best prediction model based on performance on test set.
+## <a name="summary"></a> 1. Summary
+In our project, we first select potential predictors based on both literature review and EDA results. Then we built eight classification models to predict the baseline diagnosis status of an individual given his predictors patterns. For each model, we used three different imputation methods: directly drop missing, mean imputation, and regression imputation. We also tried two types of regularization, Ridge and Lasso. We selected our best prediction model based on the performance on test set.
 
 ## <a name="results"></a> 2. Results
 
@@ -39,6 +38,4 @@ summary_df['Test Accuracy'] = test_acc_array
 ![summary table](/images/stable.png)
 
 
-## <a name="conclusion"></a> 3. Conclusion
-
-## <a name="suggestion"></a> 4. Suggestion
+## <a name="discussion"></a> 3. Discussion
