@@ -1,6 +1,7 @@
 [Introduction](https://mal5482.github.io/ADNI-Alzheimer-Project/index)   |   [Literature Review](https://mal5482.github.io/ADNI-Alzheimer-Project/Review)   |   [**EDA**](https://mal5482.github.io/ADNI-Alzheimer-Project/EDA)   |   [Models](https://mal5482.github.io/ADNI-Alzheimer-Project/Models)   |   [Summary](https://mal5482.github.io/ADNI-Alzheimer-Project/Summary)   |   [Reference](https://mal5482.github.io/ADNI-Alzheimer-Project/Reference)
 
 # EDA
+---
 ## Contents
 * [0.Import Libraries](#Import-libraries)<br>
 * [1.Load, Preprocess, Merge, and Split data](#Load-Preprocess-Merge-and-Split-data)<br>
