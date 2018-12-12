@@ -756,6 +756,19 @@ Test accuracy of decision tree (max depth=3): 0.9369
 Training accuracy of decision tree (max depth=4): 0.9460
 Test accuracy of decision tree (max depth=4): 0.9189 
 ```
+***Each Label Performance***<br>
+We looked at the prediction accuracy of the best model on each diagnosis label, and we found they still remained high.
+```py
+# prediction accuracy of each label of mean imputation model
+print(classification_report(y_trains[1], dt_models[1].predict(X_trains[1])))
+print(classification_report(y_tests[1], dt_models[1].predict(X_tests[1])))
+```
+```Markdown
+         label    Training Accuracy    Test Accuracy 
+           1           0.97            	   0.97
+           2           0.90                0.89
+           3           0.93                0.94
+```
 
 We can have a look at the **structure** of each decision tree.
 ```py
