@@ -1,4 +1,4 @@
-[Introduction](https://mal5482.github.io/ADNI-Alzheimer-Project/index)   |   [Literature Review](https://mal5482.github.io/ADNI-Alzheimer-Project/Review)   |   [**EDA**](https://mal5482.github.io/ADNI-Alzheimer-Project/EDA)   |   [Models](https://mal5482.github.io/ADNI-Alzheimer-Project/Models)   |   [Conclusion](https://mal5482.github.io/ADNI-Alzheimer-Project/Summary)   |   [Reference](https://mal5482.github.io/ADNI-Alzheimer-Project/Reference)
+[Introduction](https://mal5482.github.io/ADNI-Alzheimer-Project/index)   |   [Literature Review](https://mal5482.github.io/ADNI-Alzheimer-Project/Review)   |   [**EDA**](https://mal5482.github.io/ADNI-Alzheimer-Project/EDA)   |   [Models](https://mal5482.github.io/ADNI-Alzheimer-Project/Models)   |   [Results and Discussion](https://mal5482.github.io/ADNI-Alzheimer-Project/Summary)   |   [Conclusion](https://mal5482.github.io/ADNI-Alzheimer-Project/Conclusion)   |   [Reference](https://mal5482.github.io/ADNI-Alzheimer-Project/Reference)
 
 # EDA
 ---
@@ -28,6 +28,7 @@ sns.set_context('poster')
 # set color palette
 dpal = sns.choose_colorbrewer_palette(data_type='diverging', as_cmap=True)
 ```
+---
 ## <a name="Load-Preprocess-Merge-and-Split-data"></a> 1. Load, Preprocess, Merge, and Split data
 ```py
 # KEY ADNI table with age, gender, ethnicity, race, education, marital status, and APOE status
@@ -70,6 +71,7 @@ print('The sample size of test set is %.d (%.2f' % (data_test.shape[0],
 data_train.to_csv('data_train.csv')
 data_test.to_csv('data_test.csv')
 ```
+---
 ## <a name="Perform-EDA-to-select-potential-predictors"></a> 2. Perform EDA to select potential predictors
 ## <a name="Demographics-Characteristics"></a>a. Demographics Characteristics
 ## <a name="Outcome-Baseline-Diagnosis-Of-Alzheimer's-Disease"></a> b. Outcome: Baseline Diagnosis of Alzheimer's Disease
@@ -378,8 +380,8 @@ APOE4 Status: The APOE4 status seems to be associated with baseline diagnosis, b
 
 **Variable Selection:
 We select APOE4 Status as potential predictor.**
-
-## <a name="Summary"></a> Summary
+---
+## <a name="Summary"></a> 3. Summary
 
 Based on the EDA above, we may first include the following variables as potential predictors for modeling:
 
