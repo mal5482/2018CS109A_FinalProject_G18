@@ -82,7 +82,9 @@ data_test.to_csv('data_test.csv')
 **MCI**: Mild Cognitive Impairment: (ADNI1/3 phase)<br>
 **LMCI**: Late Mild Cognitive Impairment (ADNI GO/2 phase)<br>
 **SMC**: SIGNIFICANT MEMORY CONCERN (ADNI2 phase)<br>
+**AD:** Alzheimer's Disease
 
+<p> **In our dataset, becasue our inclusion criteria, the outcome includes only three categories: CN, AD, and LMCI.**</p>
 ```py
 bldx_df=pd.DataFrame(index=['Baseline Diagnosis Prevalence'],columns=['CN','AD','LMCI'])
 bldx_df.CN=np.mean(data_train['DX_bl']=='CN')
@@ -91,7 +93,7 @@ bldx_df.LMCI=np.mean(data_train['DX_bl']=='LMCI')
 bldx_df
 ```	
 ```Markdown
-                                CN	        AD          LMCI 
+                                CN	      AD         LMCI 
 Baseline Diagnosis Prevalence	0.294964	  0.230216	   0.47482
 ```
 
