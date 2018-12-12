@@ -1,6 +1,6 @@
-[Introduction](https://mal5482.github.io/ADNI-Alzheimer-Project/index)   |   [Literature Review](https://mal5482.github.io/ADNI-Alzheimer-Project/Review)   |   [EDA](https://mal5482.github.io/ADNI-Alzheimer-Project/EDA)   |   [Models](https://mal5482.github.io/ADNI-Alzheimer-Project/Models)   |   [**Summary**](https://mal5482.github.io/ADNI-Alzheimer-Project/Summary)   |   [Reference](https://mal5482.github.io/ADNI-Alzheimer-Project/Reference)
+[Introduction](https://mal5482.github.io/ADNI-Alzheimer-Project/index)   |   [Literature Review](https://mal5482.github.io/ADNI-Alzheimer-Project/Review)   |   [EDA](https://mal5482.github.io/ADNI-Alzheimer-Project/EDA)   |   [Models](https://mal5482.github.io/ADNI-Alzheimer-Project/Models)   |   [**Conclusion**](https://mal5482.github.io/ADNI-Alzheimer-Project/Summary)   |   [Reference](https://mal5482.github.io/ADNI-Alzheimer-Project/Reference)
 
-# Summary
+# Results and Conclusion
 
 **1. Results of previous classification models:**
 
@@ -27,30 +27,3 @@ summary_df['Training Accuracy'] = train_acc_array
 summary_df['Test Accuracy'] = test_acc_array
 
 ```
-
-|   Models    |   Imputation Method    |   Training Accuracy    |    Test Accuracy   |
-|-------|-------|-------|----------|
-|                                      |  Drop Missing    |       |       |
-|  Multinomial Logistic Regression     |  Mean Imputation   |       |       |
-|                                      |  Regression Imputation     |       |       |
-|                                      |  Drop Missing    |       |       |
-|  LDA                                 |  Mean Imputation   |       |       |
-|                                      |  Regression Imputation     |       |       |
-|                                      |  Drop Missing    |       |       |
-|  QDA                                 |  Mean Imputation   |       |       |
-|                                      |  Regression Imputation     |       |       |
-|                                      |  Drop Missing    |       |       |
-|  k-NN                                |  Mean Imputation   |       |       |
-|                                      |  Regression Imputation     |       |       |
-|                                      |  Drop Missing    |       |       |
-|  Decision Tree                       |  Mean Imputation   |       |       |
-|                                      |  Regression Imputation     |       |       |
-|                                      |  Drop Missing    |       |       |
-|  Bagging                             |  Mean Imputation   |       |       |
-|                                      |  Regression Imputation     |       |       |
-|                                      |  Drop Missing    |       |       |
-|  Random Forest                       |  Mean Imputation   |       |       |
-|                                      |  Regression Imputation     |       |       |
-|                                      |  Drop Missing    |       |       |
-|  AdaBoost                            |  Mean Imputation   |       |       |
-|                                      |  Regression Imputation     |       |       |
