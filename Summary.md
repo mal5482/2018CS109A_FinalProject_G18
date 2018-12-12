@@ -45,8 +45,8 @@ The model that performs best is the **random forest model** using regression imp
 
 The only other model that has a test accuracy over 96% is the **multinomial logistic regression** using drop missing imputation, and **lasso regularization**. This model set the coefficient of many predictors to zero and kept only 9 predictors. Actually, when using mean imputation and regression imputation, this model would drop one more predictor (RAVLT_learning_bl) and kept only 8 predictors.
 
-The performance of the models on **each label** is also very high, which indicates the reliability of our model. The test accuracy of predicting CN, AD and LMCI is **97%**, **95%**, **97%** respectively.
-
+The performance of the models on **each label** is also very high, which indicates the reliability of our model.
+![Each label performance](/images/stable_each.png)
 
 
 ## <a name="discussion"></a> 3. Discussion
