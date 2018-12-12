@@ -14,6 +14,8 @@
 
 ## <a name="results"></a> 2. Results
 
+### Overall Performance of Models
+
 ```py
 # create summary table
 models_name = ['Multinomial Logistic Regression','LDA','QDA','k-NN','Decision Tree','Bagging','Random Forest','AdaBoost']
@@ -45,8 +47,12 @@ The model that performs best is the **random forest model** using regression imp
 
 The only other model that has a test accuracy over 96% is the **multinomial logistic regression** using drop missing imputation, and **lasso regularization**. This model set the coefficient of many predictors to zero and kept only 9 predictors. Actually, when using mean imputation and regression imputation, this model would drop one more predictor (RAVLT_learning_bl) and kept only 8 predictors.
 
-The performance of the models on **each label** is also very high, which indicates the reliability of our model.
+### Performance of Models on Each Diagnosis Label
+
 ![Each label performance](/images/stable_each.png)
 
+The performance of the models on **each label** is also very high, which indicates the reliability of our model.
+
+Three of the models have worst performance in predicting CN, and five of them have worst performance in predicting AD among the three labels. This is somewhat reasonable as the number of instances of CN and AD are around a half to the number of instances of LMCI in the dataset. This may also suggest that distinguish AD from other two classes is more difficult than vise versa.
 
 ## <a name="discussion"></a> 3. Discussion
