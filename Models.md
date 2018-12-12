@@ -1017,6 +1017,7 @@ for i in range(3):
     ax_rf2[i].set_xlabel('Relative Importance');
 ```
 ![Random Forest2](/images/rf1.png)
+
 **From this picture, we could see that the importance of CDRSB_bl is significantly higher than any other single predictors. This correspones back to our finding in single decision tree models. We would further discuss the importance of this predictor and other predictors later.**
 
 ```python
