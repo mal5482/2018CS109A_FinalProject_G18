@@ -85,7 +85,7 @@ data_test.to_csv('data_test.csv')
 **SMC**: SIGNIFICANT MEMORY CONCERN (ADNI2 phase)<br>
 **AD:** Alzheimer's Disease
 
-**<p>In our dataset, becasue our inclusion criteria, the outcome includes only three categories: CN, AD, and LMCI.</p>**
+**In our dataset, becasue our inclusion criteria, the outcome includes only three categories: CN, AD, and LMCI.**
 
 ```py
 bldx_df=pd.DataFrame(index=['Baseline Diagnosis Prevalence'],columns=['CN','AD','LMCI'])
@@ -394,12 +394,12 @@ plt.ylabel('Count');
 APOE4 Status: The APOE4 status seems to be associated with baseline diagnosis, but the association is not very clear based on this plot. We may select APOE status as potential predictor.
 
 **Variable Selection:
-We select APOE4 Status as potential predictor.**
+We select APOE4 Status as potential predictor.**<br>
 ---
 
 ## <a name="Summary"></a> 3. Summary
 
-Based on the EDA above, we may first include the following variables as potential predictors for modeling:
+**Based on the EDA above, we may first include the following variables as potential predictors for modeling:**
 
 * Demographic characteristics: Age, Gender, and Marital Status;
 * Lifestyle factors: Baseline smoking;
