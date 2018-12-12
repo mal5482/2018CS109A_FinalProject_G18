@@ -1232,3 +1232,4 @@ Test accuracy of a random forest with 26 trees and max tree depth=3 is : 0.7477.
 Training accuracy of a random forest with 52 trees and max tree depth=4 is : 0.8597.
 Test accuracy of a random forest with 52 trees and max tree depth=3 is : 0.7477. 
 ```
+
