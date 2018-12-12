@@ -98,7 +98,9 @@ bldx_df
 Baseline Diagnosis Prevalence	0.294964	  0.230216	   0.47482
 ```
 
-## <a name="Outcome-Baseline-Diagnosis-Of-Alzheimer's-Disease"></a> 2) Demographics Characteristics
+## <a name="Demographics-Characteristics"></a> 2) Demographics Characteristics
+**In this part, we look at the distribution of six demographics characteristics within each diagnosis status: **<br>
+Gender, Marital Status, Race, Ethnicity, Age, and Education.
 
 ```py
 # plots for demographics characteristics within each baseline diagnosis group
