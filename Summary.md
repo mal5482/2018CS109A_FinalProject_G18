@@ -10,7 +10,7 @@
 ---
 
 ## <a name="summary"></a> 1. Summary
-<p> In our project, we first select potential predictors based on both literature review and EDA results. Then we built eight classification models to predict the baseline diagnosis status of an individual given his predictors patterns. For each model, we used three different imputation methods: directly drop missing, mean imputation, and regression imputation. We also tried two types of regularization, Ridge and Lasso. We selected our best prediction model based on the performance on test set.</p>
+<p> In our project, we first select potential predictors based on both literature review and EDA results. Then we built nine classification models to predict the baseline diagnosis status of an individual given his predictors patterns. For each model, we used three different imputation methods: directly drop missing, mean imputation, and regression imputation. We also tried two types of regularization, Ridge and Lasso. We selected our best prediction model based on the performance on test set.</p>
 
 ## <a name="results"></a> 2. Results
 
@@ -39,5 +39,7 @@ summary_df['Test Accuracy'] = test_acc_array
 ```
 ![summary table](/images/stable.png)
 
+<p>Overall, the models perform pretty well in classifying the three diagnosis status.</p>
+<p> Except for k-NN model, all other models manage to achieve a test accuracy higher than 0.87, and six of them have test accuracy higher than 0.90. The model that performs best is the random forest model using regression imputation, max tree depth equals, and number of trees equals 35. It reaches a test accuracy of 0.9640, even higher than its training accuracy. The only other model that has a test accuracy over 0.96 is the multinomial logistic regression using drop missing imputation, and lasso regularization. This model set the coefficient of many predictors to zero and kept only 9 predictors.
 
 ## <a name="discussion"></a> 3. Discussion
