@@ -84,7 +84,8 @@ data_test.to_csv('data_test.csv')
 **SMC**: SIGNIFICANT MEMORY CONCERN (ADNI2 phase)<br>
 **AD:** Alzheimer's Disease
 
-<p> **In our dataset, becasue our inclusion criteria, the outcome includes only three categories: CN, AD, and LMCI.**</p>
+**<p>In our dataset, becasue our inclusion criteria, the outcome includes only three categories: CN, AD, and LMCI.</p>**
+
 ```py
 bldx_df=pd.DataFrame(index=['Baseline Diagnosis Prevalence'],columns=['CN','AD','LMCI'])
 bldx_df.CN=np.mean(data_train['DX_bl']=='CN')
