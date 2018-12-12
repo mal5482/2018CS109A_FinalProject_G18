@@ -1,4 +1,4 @@
-[Introduction](https://mal5482.github.io/ADNI-Alzheimer-Project/index)   |   [Literature Review](https://mal5482.github.io/ADNI-Alzheimer-Project/Review)   |   [**EDA**](https://mal5482.github.io/ADNI-Alzheimer-Project/EDA)   |   [Classification Models](https://mal5482.github.io/ADNI-Alzheimer-Project/Models)   |   [Results and Conclusion](https://mal5482.github.io/ADNI-Alzheimer-Project/Summary)   |   [Reference](https://mal5482.github.io/ADNI-Alzheimer-Project/Reference)
+[Introduction](https://mal5482.github.io/ADNI-Alzheimer-Project/index)   |   [Literature Review](https://mal5482.github.io/ADNI-Alzheimer-Project/Review)   |   [**EDA**](https://mal5482.github.io/ADNI-Alzheimer-Project/EDA)   |   [Models](https://mal5482.github.io/ADNI-Alzheimer-Project/Models)   |   [Conclusion](https://mal5482.github.io/ADNI-Alzheimer-Project/Summary)   |   [Reference](https://mal5482.github.io/ADNI-Alzheimer-Project/Reference)
 
 # EDA
 ---
