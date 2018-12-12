@@ -394,7 +394,8 @@ plt.ylabel('Count');
 APOE4 Status: The APOE4 status seems to be associated with baseline diagnosis, but the association is not very clear based on this plot. We may select APOE status as potential predictor.
 
 **Variable Selection:
-We select APOE4 Status as potential predictor.**<br>
+We select APOE4 Status as potential predictor.**
+
 ---
 
 ## <a name="Summary"></a> 3. Summary
