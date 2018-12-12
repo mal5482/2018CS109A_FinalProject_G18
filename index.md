@@ -2,11 +2,12 @@
 
 # Predictive model for early diagnosis of Alzheimer's Disease using ADNI Databse
 ### Group 18 | Man Liu, Xinan Wang
-![picture](/images/AD.png)
 
 ## Introduction of Alzheimer's Disease
 
 Alzheimer’s disease (AD) is an irreversible neurodegenerative disease that results in a loss of mental function caused by the deterioration of brain tissue. Symptoms includes problems with memory, thinking and behavior. The number of Americans living with Alzheimer's is growing fast. An estimated 5.7 million Americans of all ages have Alzheimer's in 2018, and over 96% are people older than 65 years old and approximately 200,000 individuals under age 65 who have younger-onset Alzheimer's. Alzheimer’s Disease is the only top 10 cause of death in the United States that cannot be prevented, cured or even slowed. MCI, a high-risk condition for dementia, is regarded as a transitional state between cognitive normal (CN) and Alzheimer’s Disease (AD). MCI is also classified as early MCI (EMCI) and late MCI (LMCI). 
+![picture](/images/AD.png)
+
 
 ## Introduction of Alzheimer's Disease Neuroimaigng Initiative (ADNI) 
 ![picture](/images/adni.png)
