@@ -2,7 +2,7 @@
 
 # Predictive model for early diagnosis of Alzheimer's Disease using ADNI Databse
 ### Group 18 | Man Liu, Xinan Wang
-![picture](/images/Picture3.png)
+![picture](/images/AD.png)
 
 ## Introduction of Alzheimer's Disease
 
