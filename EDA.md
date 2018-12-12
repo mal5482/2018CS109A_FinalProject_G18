@@ -6,13 +6,13 @@
 * [0. Import Libraries](#Import-libraries)<br>
 * [1. Load, Preprocess, Merge, and Split data](#Load-Preprocess-Merge-and-Split-data)<br>
 * [2. Perform EDA to select potential predictors](#Perform-EDA-to-select-potential-predictors)<br>
-    * [a.)Demographics Characteristics](#Demographics-Characteristics)<br>
-    * [b.)Outcome: Baseline Diagnosis of Alzheimer's Disease](#Outcome-Baseline-Diagnosis-of-Alzheimer's-Disease)<br>
-    * [c.)Lifestyle factors (from medical history dataset)](#Lifestyle-factors)<br>
-    * [d.)Neurocognitive/neuropsychological assessments](#Cerebrospinal-fluid-(CSF)-Biomarkers)<br>
-    * [e.)Cerebrospinal fluid (CSF) Biomarkers](#Cerebrospinal-fluid-(CSF)-Biomarkers)<br>
-    * [f.)Imaging factors](#Imaging-factors)<br>
-    * [g.) Genetic factors](#Genetic-factors)<br>
+    * [1) Outcome: Baseline Diagnosis of Alzheimer's Disease](#Outcome-Baseline-Diagnosis-of-Alzheimer's-Disease)<br>
+    * [2) Demographics Characteristics](#Demographics-Characteristics)<br>
+    * [3) Lifestyle factors (from medical history dataset)](#Lifestyle-factors)<br>
+    * [4) Neurocognitive/neuropsychological assessments](#Cerebrospinal-fluid-(CSF)-Biomarkers)<br>
+    * [5) Cerebrospinal fluid (CSF) Biomarkers](#Cerebrospinal-fluid-(CSF)-Biomarkers)<br>
+    * [6) Imaging factors](#Imaging-factors)<br>
+    * [7) Genetic factors](#Genetic-factors)<br>
 * [3. Summary](#summary)<br> 
 
 ## <a name="Import-libraries"></a> 0. Import libraries
@@ -73,8 +73,14 @@ data_test.to_csv('data_test.csv')
 ```
 ---
 ## <a name="Perform-EDA-to-select-potential-predictors"></a> 2. Perform EDA to select potential predictors
-## <a name="Demographics-Characteristics"></a>a. Demographics Characteristics
-## <a name="Outcome-Baseline-Diagnosis-Of-Alzheimer's-Disease"></a> b. Outcome: Baseline Diagnosis of Alzheimer's Disease
+## <a name="Demographics-Characteristics"></a> 1) Outcome: Baseline Diagnosis of Alzheimer's Disease
+**The outcome of our study is baseline diagnosis status (categorical).**<br>
+**The full dataset include five categories:**<br>
+**CN**: NORMAL AGING/COGNITIVELY NORMAL (ADNI 1/GO/2/3 phase)
+**EMCI**: Early Mild Cognitive Impairment (ADNI GO/2 phase)
+**MCI**: Mild Cognitive Impairment: (ADNI1/3 phase)
+**LMCI**: Late Mild Cognitive Impairment (ADNI GO/2 phase)
+**SMC**: SIGNIFICANT MEMORY CONCERN (ADNI2 phase)
 
 ```py
 bldx_df=pd.DataFrame(index=['Baseline Diagnosis Prevalence'],columns=['CN','AD','LMCI'])
@@ -87,6 +93,9 @@ bldx_df
                                 CN	        AD          LMCI 
 Baseline Diagnosis Prevalence	0.294964	0.230216	0.47482
 ```
+
+## <a name="Outcome-Baseline-Diagnosis-Of-Alzheimer's-Disease"></a> 2) Demographics Characteristics
+
 
 ```py
 # plots for demographics characteristics within each baseline diagnosis group
