@@ -39,10 +39,10 @@ summary_df['Test Accuracy'] = test_acc_array
 ```
 ![summary table](/images/stable.png)
 
-<p>**Overall, the models perform pretty well in classifying the three diagnosis status. Except for k-NN model, all other models manage to achieve a test accuracy higher than 0.87, and six of them have test accuracy higher than 0.90, two higher than 0.96.**</p>
-<p>The model that performs best is the random forest model using regression imputation, max tree depth equals 4, and number of trees equals 35. It reaches a test accuracy of 0.9640, even higher than its training accuracy.<br>
-The only other model that has a test accuracy over 0.96 is the multinomial logistic regression using drop missing imputation, and lasso regularization. This model set the coefficient of many predictors to zero and kept only 9 predictors. Actually, when using mean imputation and regression imputation, this model would drop one more predictor (RAVLT_learning_bl) and kept only 8 predictors.</p>
-**<p>The performance of the models on each label is also very high, which indicates the reliability of our model. The test accuracy of predicting CN, AD and LMCI is 0.97, 0.95, 0.97 respectively.</p>**
+<p>Overall, the models perform pretty well in classifying the three diagnosis status. Except for k-NN model, all other models manage to achieve a test accuracy higher than 0.87, and six of them have test accuracy higher than 0.90, two higher than 0.96.</p>
+<p>The model that performs best is the **random forest model** using regression imputation, max tree depth equals 4, and number of trees equals 35. It reaches a test accuracy of 0.9640, even higher than its training accuracy.<br>
+The only other model that has a test accuracy over 0.96 is the **multinomial logistic regression** using drop missing imputation, and **lasso regularization**. This model set the coefficient of many predictors to zero and kept only 9 predictors. Actually, when using mean imputation and regression imputation, this model would drop one more predictor (RAVLT_learning_bl) and kept only 8 predictors.</p>
+<p>The performance of the models on each label is also very high, which indicates the reliability of our model. The test accuracy of predicting CN, AD and LMCI is 0.97, 0.95, 0.97 respectively.</p>
 <p>
 
 ## <a name="discussion"></a> 3. Discussion
