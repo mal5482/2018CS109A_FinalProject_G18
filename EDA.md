@@ -113,14 +113,13 @@ for i in range(2):
 ![Demographics](/images/Unknown.png)
 
 **Interpretation:**
-Outcome:There is only three types of basline diagnosis status for people in ADNI1 stage.
-
-Gender:Male and female seems to have different patterns of baseline diagnosis. Therefore, we select gender as our potential predictor.
-Marital Status:Based on the countplot, married people seem to have different patterns of baseline diagnosis comparing to unmarried people. We select Martial Status as our potential predictor.
-Race:Again, the majority of people in our training set is 'White'. We do not have sufficient power to observe the pattern of baseline diagnosis across different race groups.
-Ethnicity:The majority of people in our dataset is 'Non-Hispanic/Latino'. There is no Hispanic/Latino individuals in our training set. We do not have sufficient power to observe the pattern of baseline diagnosis across different ethnicity groups.
-Age:Based on the boxplot, Age seems to have different distribution in different baseline diagnosis groups. Therefore, we select age as our potential predictor.
-Education:There is no apparent relationship between Education and baseline diagnosis.
+* Outcome:There is only three types of basline diagnosis status for people in ADNI1 stage.
+* Gender:Male and female seems to have different patterns of baseline diagnosis. Therefore, we select gender as our potential predictor.
+* Marital Status:Based on the countplot, married people seem to have different patterns of baseline diagnosis comparing to unmarried people. We select Martial Status as our potential predictor.
+* Race:Again, the majority of people in our training set is 'White'. We do not have sufficient power to observe the pattern of baseline diagnosis across different race groups.
+* Ethnicity:The majority of people in our dataset is 'Non-Hispanic/Latino'. There is no Hispanic/Latino individuals in our training set. We do not have sufficient power to observe the pattern of baseline diagnosis across different ethnicity groups.
+* Age:Based on the boxplot, Age seems to have different distribution in different baseline diagnosis groups. Therefore, we select age as our potential predictor.
+* Education:There is no apparent relationship between Education and baseline diagnosis.
 
 **Variable Selection:
 We select Age, Gender and Marital Status as potential predictors.**
@@ -148,8 +147,8 @@ plt.ylabel('Count') ;
 ![Smoking_Alcohol](/images/Smok_ALC.png)
 
 **Interpretation:**
-Baseline smoking: Based on the countplot, people who smoke are more likely to have baseline diagnosis of LMCI. We should include Baseline smoking as potential predictor.
-Baseline alcohol abuse: The majority of the people in this dataset do not have history of alcohol abuse. We do not have sufficient power to observe the pattern of baseline diagnosis across different alcohol abuse status.
+* Baseline smoking: Based on the countplot, people who smoke are more likely to have baseline diagnosis of LMCI. We should include Baseline smoking as potential predictor.
+* Baseline alcohol abuse: The majority of the people in this dataset do not have history of alcohol abuse. We do not have sufficient power to observe the pattern of baseline diagnosis across different alcohol abuse status.
 
 **Variable Selection:
 We select Baseline smoking as potential predictor.**
@@ -205,8 +204,8 @@ for i in range(len(neu_predictors)):
  ![Neuro_BOX](/images/Neuro_Box.png)
  
 **Interpretation:**
-There is apparent association between baseline diagnosis and baseline MMSE score, RAVLT scores (learning), RAVLT scores (immediate recall), RAVLT scores (percent forgeting), AVLT Delayed Recognition score, Baseline ADAS11, Baseline ADAS13, Trail making test B score, Clinical Dementia Rating score, FAQ score.
-Only RAVLT scores (forgetting) and Trail making test A score seem to have no difference within different baseline diagnosis group.
+There is apparent association between baseline diagnosis and baseline MMSE score, RAVLT scores (learning), RAVLT scores (immediate recall), RAVLT scores (percent forgeting), AVLT Delayed Recognition score, Baseline ADAS11, Baseline ADAS13, Trail making test B score, Clinical Dementia Rating score, FAQ score. Only RAVLT scores (forgetting) and Trail making test A score seem to have no difference within different baseline diagnosis group.
+
  
 ### <a name="3. Correlation matrix"></a> 3.Correlation matrix
  ```py
@@ -304,8 +303,7 @@ sns.heatmap(corr_b, cmap=dpal, annot=True, fmt=".2f", ax=axb3,
 ```
 ![Imaging_Heat](/images/image_Heat.png)
 **Interpretation**
-TAU and PTAU are clearly highly correlated. We should only include one of them.
-ABETA is weakly associated with the other two variables.
+TAU and PTAU are clearly highly correlated. We should only include one of them. ABETA is weakly associated with the other two variables.
 
 **Variable Selection:
 We may include ABETA and TAU as potential predictors.**
@@ -344,8 +342,7 @@ for i in range(len(img_columns)):
 ![Imaging](/images/imaging_box.png)
 
 **Interpretation**
-Based on the boxplot, we could see that baseline Hippocampus volume and Entorhinal volume is apparently associated with baseline diagnosis.
-The other four features seem to have different distribution in AD diagnosis but but no in CN and LMCI.
+Based on the boxplot, we could see that baseline Hippocampus volume and Entorhinal volume is apparently associated with baseline diagnosis. The other four features seem to have different distribution in AD diagnosis but but no in CN and LMCI.
 
 ### <a name="3.Correlation matrix"></a> 3.Correlation matrix
 ```py
@@ -386,11 +383,11 @@ We select APOE4 Status as potential predictor.**
 
 Based on the EDA above, we may first include the following variables as potential predictors for modeling:
 
-1.) Demographic characteristics: Age, Gender, and Marital Status;
-2.) Lifestyle factors: Baseline smoking;
-3.) Neurocognitive/neuropsychological assessments: MMSE_bl, RAVLT_learning_bl, RAVLT_immediate_bl, RAVLT_perc_forgetting_bl, AVLT_Delay_Rec, ADAS13_bl, TMT_PtB_Complete, CDRSB_bl;
-4.) Cerebrospinal fluid (CSF) Biomarkers: ABETA_bl and TAU_bl;
-5.) Imaging Brain factors: Hippocampus_bl, Entorhinal_bl, Ventricles_bl, MidTemp_bl;
-6.) Genetic factors: APOE4 Status.
+* 1.) Demographic characteristics: Age, Gender, and Marital Status;
+* 2.) Lifestyle factors: Baseline smoking;
+* 3.) Neurocognitive/neuropsychological assessments: MMSE_bl, RAVLT_learning_bl, RAVLT_immediate_bl, RAVLT_perc_forgetting_bl, AVLT_Delay_Rec, ADAS13_bl, TMT_PtB_Complete, CDRSB_bl;
+* 4.) Cerebrospinal fluid (CSF) Biomarkers: ABETA_bl and TAU_bl;
+* 5.) Imaging Brain factors: Hippocampus_bl, Entorhinal_bl, Ventricles_bl, MidTemp_bl;
+* 6.) Genetic factors: APOE4 Status.
 
 
