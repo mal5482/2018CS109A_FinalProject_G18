@@ -313,6 +313,7 @@ for i in range(3):
 ```
 ![PC1 vs. PC2](/images/pca1.png)
 ![Cumulative explained variance](/images/pca2.png)
+**From PCA we could find that for our data, we need large number of principle components to account for a high variance of the total variance in predictors. Considering the size of our dataset and dangerous of overfitting, we did not use PCs to run models.**
 
 ### <a name="logistic"></a> 1) Multinomial Logistic Modeling
 **We used two regularization methods to run the model: Ridge and Lasso. They could help us to better understand the importance of features in different settings.**
@@ -461,21 +462,30 @@ lasso_coef_df
 
 **<p>The predictors that are kept in every model with non-zero coefficients are:**           
 MMSE_bl, RAVLT_immediate_bl, RAVLT_perc_forgetting_bl, ADAS13_bl, CDRSB_bl, ABETA_bl_n, TAU_bl_n, Hippocampus_bl.<br>
-Among them, the first five predictors are from neurocognitive/neuropsychological assessments;<br>
+**Among them, the first five predictors are from neurocognitive/neuropsychological assessments;<br>
 ABETA_bl_n and TAU_bl_n are from cerebrospinal fluid (CSF) biomarkers;<br>
-Hippocampus_bl is from imaging data.</p>
+Hippocampus_bl is from imaging data.</p>**
 
+##### Each Label Performance
 **We looked at the prediction accuracy of the best model (using regression imputation) on each diagnosis label, and we found they still remained high**
 ```py
 # prediction accuracy of each label of regression imputation model
-print(classification_report(y_trains[2], logi_models[2].predict(X_trains[2])))
-print(classification_report(y_tests[2], logi_models[2].predict(X_tests[2])))
+print(classification_report(y_trains[2], logi_models_r[2].predict(X_trains[2])))
+print(classification_report(y_tests[2], logi_models_r[2].predict(X_tests[2])))
+print(classification_report(y_trains[0], logi_models_l[0].predict(X_trains[0])))
+print(classification_report(y_tests[0], logi_models_l[0].predict(X_tests[0])))
 ```
 ```Markdown
+Ridge:
          label    Training Accuracy    Test Accuracy 
            1           0.97            	   0.92
            2           0.93                0.88
            3           0.95                0.91
+Lasso:
+         label    Training Accuracy    Test Accuracy 
+           1           0.95            	   0.95
+           2           0.90                0.97
+           3           0.92                0.96
 ```
 
 ### <a name="lda"></a> 2) Linear discriminant analysis (LDA)
