@@ -961,20 +961,6 @@ Test accuracy of bagging with 50 trees (max depth=4): 0.9459
 Feature used most at the top node in bagging: 11 
 ```
 
-***Each Label Performance***<br>
-We looked at the prediction accuracy of the best model on each diagnosis label, and we found they still remained high.
-```py
-# prediction accuracy of each label of regression imputation model
-print(classification_report(y_trains[2], dt_models[2].predict(X_trains[2])))
-print(classification_report(y_tests[2], dt_models[2].predict(X_tests[2])))
-```
-```Markdown
-         label    Training Accuracy    Test Accuracy 
-           1           0.98            	   0.92
-           2           0.91                0.91
-           3           0.94                0.92
-```
-
 ### <a name="random-forest"></a> 7) Random Forest
 We used the best decision tree as the base model, built random forest models with different number of trees, and chose the optimal number of trees for each imputation method based on training accuracy.
 ```python
