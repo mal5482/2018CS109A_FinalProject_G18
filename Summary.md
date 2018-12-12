@@ -9,7 +9,7 @@
 * [4. Suggestion](#suggestion)<br> 
 
 ## <a name="summary"></a> 1. Summary of analysis process
-
+In our project, we first select potential predictors based on both literature review and EDA results. Then we built eight classification models to predict the baseline diagnosis status of an individual given his predictors patterns. For each model, we used three different imputation methods: directly drop missing, mean imputation, and regression imputation. We selected the best prediction model based on performance on test set.<p>
 
 ## <a name="results"></a> 2. Results
 
