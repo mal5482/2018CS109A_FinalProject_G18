@@ -838,6 +838,7 @@ node 0: if X[:, 11] <= -0.837 then go to node 1, else go to node 2
         node 13: predict class 2
       node 14: predict class 3
 ```
+**From tree structures, we could see that the predictors used in decision trees are CDRSB_bl(11), MMSE_bl(4), TMT_PtB_Complete(10), MidTemp_bl(17), ADAS13_bl(9). Among them, the most frequently used one is CDRSB_bl(11).**
 
 ### <a name="bagging"></a> 6) Bagging
 **We used the best decision tree for each imputation method as the base model, and do Bagging with 50 bootstrapping samples.**
@@ -1017,6 +1018,8 @@ for i in range(3):
     ax_rf2[i].set_xlabel('Relative Importance');
 ```
 ![Random Forest2](/images/rf1.png)
+**From this picture, we could see that the importance of CDRSB_bl is significantly higher than any other single predictors. This correspones back to our finding in single decision tree models. We would further discuss the importance of this predictor and other predictors later.**
+
 ```python
 # accuracys
 for i in range(3):
