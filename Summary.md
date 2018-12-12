@@ -1,12 +1,12 @@
 [Introduction](https://mal5482.github.io/ADNI-Alzheimer-Project/index)   |   [Literature Review](https://mal5482.github.io/ADNI-Alzheimer-Project/Review)   |   [EDA](https://mal5482.github.io/ADNI-Alzheimer-Project/EDA)   |   [Models](https://mal5482.github.io/ADNI-Alzheimer-Project/Models)   |   [**Conclusion**](https://mal5482.github.io/ADNI-Alzheimer-Project/Summary)   |   [Reference](https://mal5482.github.io/ADNI-Alzheimer-Project/Reference)
 
-# Results and Conclusion
+# Conclusion and Discussion
 ---
 ## Contents
 * [1. Summary of analysis process](#summary)<br>
 * [2. Results](#results)<br>
 * [3. Conclusion](#conclusion)<br> 
-* [4. Suggestion](#suggestion)<br> 
+* [4. Discussion](#suggestion)<br> 
 
 ## <a name="summary"></a> 1. Summary of analysis process
 In our project, we first select potential predictors based on both literature review and EDA results. Then we built eight classification models to predict the baseline diagnosis status of an individual given his predictors patterns. For each model, we used three different imputation methods: directly drop missing, mean imputation, and regression imputation. We selected the best prediction model based on performance on test set.<p>
