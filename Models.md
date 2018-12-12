@@ -313,10 +313,10 @@ for i in range(3):
 ```
 ![PC1 vs. PC2](/images/pca1.png)
 ![Cumulative explained variance](/images/pca2.png)
-**From PCA we could find that for our data, we need large number of principle components to account for a high variance of the total variance in predictors. Considering the size of our dataset and dangerous of overfitting, we did not use PCs to run models.**
+From PCA we could find that for our data, we need large number of principle components to account for a high variance of the total variance in predictors. Considering the size of our dataset and dangerous of overfitting, we did not use PCs to run models.
 
 ### <a name="logistic"></a> 1) Multinomial Logistic Modeling
-**We used two regularization methods to run the model: Ridge and Lasso. They could help us to better understand the importance of features in different settings.**
+We used two regularization methods to run the model: **Ridge** and **Lasso**. They could help us to better understand the importance of features in different settings.
 
 #### <a name="ridge"></a> a) Multinomial Logistic - Ridge Regularization
 
@@ -431,7 +431,9 @@ Mean of CV Score of Multinomial Logistic Model: 0.9213
 Training accuracy: 0.9281
 Test accuracy: 0.9189 
 ```
-**Let's look at the number of predictors kept in the model using lasso regularization.**
+
+Let's look at the number of predictors kept in the model using lasso regularization.
+
 ```py
 # number of parameters of lasso CV
 lasso_coef = []
@@ -447,7 +449,9 @@ for i in range(3):
 (Mean Imputation) Number of predictors: 8
 (Regression Imputation) Number of predictors: 8
 ```
-**So we can see that the coefficients of many predictors are set to zero. Only up to 9 predictors are kept in the models. The results can be presented in the table below.**
+
+So we can see that the coefficients of many predictors are set to zero. Only up to **9** predictors are kept in the models. The results can be presented in the table below.
+
 ```python
 # regression coefficients in lasso regularization and corresponding predictors
 lasso_coef_df = pd.DataFrame(index=np.arange(19), 
@@ -460,14 +464,18 @@ lasso_coef_df
 ```
 ![lasso1](/images/lasso1.png)
 
-**<p>The predictors that are kept in every model with non-zero coefficients are:**           
-MMSE_bl, RAVLT_immediate_bl, RAVLT_perc_forgetting_bl, ADAS13_bl, CDRSB_bl, ABETA_bl_n, TAU_bl_n, Hippocampus_bl.<br>
-**Among them, the first five predictors are from neurocognitive/neuropsychological assessments;<br>
-ABETA_bl_n and TAU_bl_n are from cerebrospinal fluid (CSF) biomarkers;<br>
-Hippocampus_bl is from imaging data.</p>**
+**The predictors that are kept in every model with non-zero coefficients are:**           
+MMSE_bl, RAVLT_immediate_bl, RAVLT_perc_forgetting_bl, ADAS13_bl, CDRSB_bl, ABETA_bl_n, TAU_bl_n, Hippocampus_bl.
+
+Among them, the first five predictors are from neurocognitive/neuropsychological assessments;
+
+ABETA_bl_n and TAU_bl_n are from cerebrospinal fluid (CSF) biomarkers;
+
+Hippocampus_bl is from imaging data.
 
 ***Each Label Performance***<br>
-**We looked at the prediction accuracy of the best model on each diagnosis label, and we found they still remained high.**
+We looked at the prediction accuracy of the best model on each diagnosis label, and we found they still remained high.
+
 ```py
 # prediction accuracy of each label of regression imputation model
 print(classification_report(y_trains[2], logi_models_r[2].predict(X_trains[2])))
@@ -567,7 +575,7 @@ Test accuracy of QDA model: 0.8739
 ```
 
 ***Each Label Performance***<br>
-**We looked at the prediction accuracy of the best model on each diagnosis label, and we found they still remained high.**
+We looked at the prediction accuracy of the best model on each diagnosis label, and we found they still remained high.
 ```py
 # prediction accuracy of each label of regression imputation model
 print(classification_report(y_trains[2], lda_models[2].predict(X_trains[2])))
@@ -590,7 +598,8 @@ QDA:
 
 
 ### <a name="knn"></a> 4) k-NN
-**First, we fit multiple k-NN models on training set, and find the best number of k based on cross validation scores.**
+First, we fit multiple k-NN models on training set, and find the best number of k based on cross validation scores.
+
 ```py
 #Fit knn models on training set
 fig, ax_knn = plt.subplots(1,3, figsize=(18,5))
@@ -622,7 +631,8 @@ for i in range(3):
 ```
 ![knn_cvscores](/images/knn.png)
 
-**Then we fit the best k-NN model for different imputation datasets.**
+Then we fit the best k-NN model for different imputation datasets.
+
 ```py
 # fit the best kNN model for each dataset
 knn_accs_train = []
@@ -655,7 +665,8 @@ Test accuracy of k-NN model (k=10): 0.7928
 ```
 
 ***Each Label Performance***<br>
-**We looked at the prediction accuracy of the best model on each diagnosis label, and we found they still remained high.**
+We looked at the prediction accuracy of the best model on each diagnosis label, and we found they still remained high.
+
 ```py
 # prediction accuracy of each label of mean imputation model
 print(classification_report(y_trains[1], knn_models[1].predict(X_trains[1])))
@@ -669,7 +680,8 @@ print(classification_report(y_tests[1], knn_models[1].predict(X_tests[1])))
 ```
 
 ### <a name="decision-tree"></a> 5) Decision Tree
-**First, we fit multiple decision trees with different max tree depth on training set, and find the best max tree depth based on cross validation scores**
+First, we fit multiple decision trees with different max tree depth on training set, and find the best max tree depth based on cross validation scores.
+
 ```py
 # Fit Decision trees with different max tree depth
 
@@ -712,7 +724,7 @@ for i in range(3):
 ```
 ![dt_cvscores](/images/dt1.png)
 
-**Then we fit the best decision tree for different imputation dataset.**
+Then we fit the best decision tree for different imputation dataset.
 ```py
 # Decision tree with depth = 2, 3, 4 for three datasets
 dt_models = []
@@ -745,7 +757,7 @@ Training accuracy of decision tree (max depth=4): 0.9460
 Test accuracy of decision tree (max depth=4): 0.9189 
 ```
 
-**We can have a look at the structure of each decision tree.**
+We can have a look at the **structure** of each decision tree.
 ```py
 # This code is adapted from
 # http://scikit-learn.org/stable/auto_examples/tree/plot_unveil_tree_structure.html
@@ -838,10 +850,10 @@ node 0: if X[:, 11] <= -0.837 then go to node 1, else go to node 2
         node 13: predict class 2
       node 14: predict class 3
 ```
-**From tree structures, we could see that the predictors used in decision trees are CDRSB_bl(11), MMSE_bl(4), TMT_PtB_Complete(10), MidTemp_bl(17), ADAS13_bl(9). Among them, the most frequently used one is CDRSB_bl(11).**
+From tree structures, we could see that the predictors used in decision trees are CDRSB_bl(11), MMSE_bl(4), TMT_PtB_Complete(10), MidTemp_bl(17), ADAS13_bl(9). Among them, the most frequently used one is **CDRSB_bl**(11).
 
 ### <a name="bagging"></a> 6) Bagging
-**We used the best decision tree for each imputation method as the base model, and do Bagging with 50 bootstrapping samples.**
+We used the best decision tree for each imputation method as the base model, and do Bagging with **50** bootstrapping samples.
 
 ```python
 #do 50 bootstrapping and store the results in bagging_train and bagging_test 
@@ -937,7 +949,7 @@ Feature used most at the top node in bagging: 11
 ```
 
 ***Each Label Performance***<br>
-**We looked at the prediction accuracy of the best model on each diagnosis label, and we found they still remained high.**
+We looked at the prediction accuracy of the best model on each diagnosis label, and we found they still remained high.
 ```py
 # prediction accuracy of each label of regression imputation model
 print(classification_report(y_trains[2], dt_models[2].predict(X_trains[2])))
@@ -951,7 +963,7 @@ print(classification_report(y_tests[2], dt_models[2].predict(X_tests[2])))
 ```
 
 ### <a name="random-forest"></a> 7) Random Forest
-**We used the best decision tree as the base model, built random forest models with different number of trees, and chose the optimal number of trees for each imputation method based on training accuracy.**
+We used the best decision tree as the base model, built random forest models with different number of trees, and chose the optimal number of trees for each imputation method based on training accuracy.
 ```python
 # build random forest with different number of trees
 
@@ -985,7 +997,7 @@ for i in range(3):
 ```
 ![Random Forest1](/images/dt2.png)
 
-**Now we fit the best random forest for each dataset with optimal number of trees.**
+Now we fit the best random forest for each dataset with optimal number of trees.
 ```python
 # best random forest for each dataset
 rfs = [10, 59, 35]
@@ -1019,7 +1031,7 @@ for i in range(3):
 ```
 ![Random Forest2](/images/rf1.png)
 
-**From this picture, we could see that the importance of CDRSB_bl is significantly higher than any other single predictors. This correspones back to our finding in single decision tree models. We would further discuss the importance of this predictor and other predictors later.**
+From this picture, we could see that the importance of **CDRSB_bl** is significantly higher than any other single predictors. This correspones back to our finding in single decision tree models. We would further discuss the importance of this predictor and other predictors.
 
 ```python
 # accuracys
@@ -1045,7 +1057,8 @@ Test accuracy of a random forest with 35 trees and max tree depth=4 is : 0.9640.
 ```
 
 ***Each Label Performance***<br>
-**We looked at the prediction accuracy of the best model on each diagnosis label, and we found they still remained high.**
+We looked at the prediction accuracy of the best model on each diagnosis label, and we found they still remained high.
+
 ```py
 # prediction accuracy of each label of regression imputation model
 print(classification_report(y_trains[2], rf_models[2].predict(X_trains[2])))
@@ -1059,7 +1072,8 @@ print(classification_report(y_tests[2], rf_models[2].predict(X_tests[2])))
 ```
 
 ### <a name="adaboost"></a> 8) AdaBoost
-**We used the best decision tree for each imputation method as the base model to build AdaBoost model.**
+We used the best decision tree for each imputation method as the base model to build AdaBoost model.
+
 ```py
 # Adaboost model using decision tree as baseline model
 ada_accs_train = []
@@ -1119,7 +1133,8 @@ Test accuracy of Ada boosting model with max tree depth=4 is : 0.8919.
 ```
 
 ***Each Label Performance***<br>
-**We looked at the prediction accuracy of the best model on each diagnosis label, and we found they still remained high, expect for the accuracy of the second label (AD).**
+We looked at the prediction accuracy of the best model on each diagnosis label, and we found they still remained high, expect for the accuracy of the second label (AD).
+
 ```py
 # prediction accuracy of each label of regression imputation model
 print(classification_report(y_trains[1], ada_models[1].predict(X_trains[1])))
@@ -1135,10 +1150,10 @@ print(classification_report(y_tests[1], ada_models[1].predict(X_tests[1])))
 
 ## <a name="cdrsb1"></a> 3. Importance of CDRSB_bl
 
-**From previous models, we noticed that CDRSB_bl plays a major role in the classification of the three diagnosis. We want to further comfirm its importance, and also look at the performance of other predictors without this predictor.**
+From previous models, we noticed that CDRSB_bl plays a major role in the classification of the three diagnosis. We want to further comfirm its importance, and also look at the performance of other predictors without this predictor.
 
 ### <a name="cdrsb2"></a> 1) Distribution of CDRSB_bl
-**We think since CDRSB_bl performs very well in decision tree, we thinks the distribution of it among the three classes must be very different.**
+We think since CDRSB_bl performs very well in decision tree, we thinks the distribution of it among the three classes must be very different.
 
 ```python
 #plot the distribution of CDRSB_bl
@@ -1153,7 +1168,8 @@ plt.legend(frameon=True);
 ![Distribution of CDRSB_bl](/images/c0.png)
 
 ### <a name="cdrsb3"></a> 2) Decision tree with only CDRSB_bl
-**Because CDRSB_bl does not have missing values, imputation methods do not affect model with CDRSB_bl as the only predictor.**
+Because CDRSB_bl does not have missing values, imputation methods do not affect model with CDRSB_bl as the only predictor.
+
 ```python
 # Decision tree with only CDRSB_bl
 dt_accuracy_dict_only = {}
@@ -1191,10 +1207,11 @@ print('Test accuracy of single decision tree (max depth=3): %.4f' % dto_acc_test
 Training accuracy of single decision tree (max depth=2): 0.8993
 Test accuracy of single decision tree (max depth=2): 0.9099
 ```
-**The model with CDRSB_bl as the only predictor remains a pretty high predictin accuracy, which demonstrates the importance of CDRSB_bl in classifying the three diagnosis status at baseline.**
+The model with CDRSB_bl as the **only predictor** remains a pretty high predictin accuracy, which demonstrates the importance of CDRSB_bl in classifying the three diagnosis status at baseline.
 
 ### <a name="cdrsb4"></a> 3) Decision tree and random forest without CDRSB_bl
-**We now look at the performace of other predictors when remove CDRSB_bl from the dataset.**
+We now look at the performace of other predictors when **remove CDRSB_bl** from the dataset.
+
 ```python
 # Decision tree without CDRSB_bl
 fig, ax_dd = plt.subplots(1,3,figsize=(18,5))
@@ -1350,4 +1367,4 @@ Test accuracy of a random forest with 26 trees and max tree depth=3 is : 0.7477.
 Training accuracy of a random forest with 52 trees and max tree depth=4 is : 0.8597.
 Test accuracy of a random forest with 52 trees and max tree depth=3 is : 0.7477. 
 ```
-**When we remove CDRSB_bl from the model, the performance dropped significantly, both training and test accuracy. The top three important features that showed in random forest models are MMSE_bl, ADAS13_bl, and RAVLT_immediate_bl. This is consistent with our finding in multinomial logistic regression using Lasso regularization.**
+When we remove CDRSB_bl from the model, the performance dropped significantly, both training and test accuracy. The top three important features that showed in random forest models are **MMSE_bl**, **ADAS13_bl**, and **RAVLT_immediate_bl**. This is consistent with our finding in multinomial logistic regression using Lasso regularization.
