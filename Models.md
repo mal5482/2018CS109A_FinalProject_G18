@@ -466,8 +466,8 @@ MMSE_bl, RAVLT_immediate_bl, RAVLT_perc_forgetting_bl, ADAS13_bl, CDRSB_bl, ABET
 ABETA_bl_n and TAU_bl_n are from cerebrospinal fluid (CSF) biomarkers;<br>
 Hippocampus_bl is from imaging data.</p>**
 
-##### Each Label Performance
-**We looked at the prediction accuracy of the best model (using regression imputation) on each diagnosis label, and we found they still remained high**
+***Each Label Performance***
+We looked at the prediction accuracy of the best model (using regression imputation) on each diagnosis label, and we found they still remained high
 ```py
 # prediction accuracy of each label of regression imputation model
 print(classification_report(y_trains[2], logi_models_r[2].predict(X_trains[2])))
