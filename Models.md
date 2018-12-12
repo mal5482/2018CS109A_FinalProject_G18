@@ -621,7 +621,7 @@ for i in range(3):
 ```
 ![knn_cvscores](/images/knn.png)
 
-**Then we fit the best k-NN model for different imputation dataset.**
+**Then we fit the best k-NN model for different imputation datasets.**
 ```py
 # fit the best kNN model for each dataset
 knn_accs_train = []
