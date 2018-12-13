@@ -207,7 +207,7 @@ for i in range(len(neu_predictors)):
     axn1[i].set_ylabel('Frequency',fontsize=14)
 ```
 ![Neuro](/images/Neuro.png)
-### <a name="Box plots and count plots with Outcomes"></a> b. Box plots and count plots with Outcomes
+### <a name="Box plots and count plots with Outcomes"></a> b. Box plots
 ```py
 # plot the boxplot of these predictors versus baseline diagnosis:
 
@@ -245,7 +245,7 @@ Neuropsychological measures in the same domain (e.g. Trail making Tests are in t
 
 **Variable Selection:
 We should include variables that has different distribution within different baseline diagnosis group.
-For the highly correlated variables, for instance, ADAS11 and ADAS13, CDRSB and FAQ, we should furthur look into them and include only one within the pairs to avoid colinearity.**
+For the highly correlated variables, for instance, ADAS11 and ADAS13, CDRSB and FAQ, we should furthur look into them to check their colinearity.**
 
 
 ## <a name="Cerebrospinal-fluid-(CSF)-Biomarkers"></a> 5) Cerebrospinal fluid (CSF) Biomarkers
