@@ -20,7 +20,7 @@ In this multisite longitudinal study, researchers at 63 sites in the US and Cana
 
 The aim of the Alzheimer’s Disease Neuroimaging Initiative (ADNI) study is to track the progression of the disease over different disease stages. The study has **four phases**: **ADNI 1** (five years since 2004), **ADNI GO** (two years since 2009), **ADNI 2** (five years since 2011), and **ADNI 3** (five years since 2016). ADNI 1 is the earlies phase.
 
-**We originally included ADNI1, ADNIGO and ADNI2 population. After data cleaning, the participants in our final study population that meets the inclusion criteria were all recruited into the ADNI study at ADNI1 phase.**
+**We originally included ADNI1, ADNIGO and ADNI2 population. After data cleaning, the participants in our final study population were all recruited into the ADNI study at ADNI1 phase.**
 
 ## Motivation of Study 
 **Early diagnosis** of **AD** or **MCI** is really important in the following aspects. 
