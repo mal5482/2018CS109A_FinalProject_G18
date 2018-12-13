@@ -1151,7 +1151,7 @@ print(classification_report(y_tests[1], ada_models[1].predict(X_tests[1])))
 From previous models, we noticed that CDRSB_bl plays a major role in the classification of the three diagnosis. We want to further comfirm its importance, and also look at the performance of other predictors without this predictor.
 
 ### <a name="cdrsb2"></a> 1) Distribution of CDRSB_bl
-We think since CDRSB_bl performs very well in decision tree, we thinks the distribution of it among the three classes must be very different.
+Since CDRSB_bl performs very well in decision tree, we thinks the distribution of it among the three classes must be very different.
 
 ```python
 #plot the distribution of CDRSB_bl
@@ -1164,6 +1164,8 @@ plt.ylabel('Frequency')
 plt.legend(frameon=True);
 ```
 ![Distribution of CDRSB_bl](/images/c0.png)
+
+Although there is overlap among the disbtributions, CDRSB_bl generally distinguishes well between the three classes, especiall between CN and the other two classes.
 
 ### <a name="cdrsb3"></a> 2) Decision tree with only CDRSB_bl
 Because CDRSB_bl does not have missing values, imputation methods do not affect model with CDRSB_bl as the only predictor.
@@ -1208,7 +1210,7 @@ Test accuracy of single decision tree (max depth=2): 0.9099
 The model with CDRSB_bl as the **only predictor** remains a pretty high predictin accuracy, which demonstrates the importance of CDRSB_bl in classifying the three diagnosis status at baseline.
 
 ### <a name="cdrsb4"></a> 3) Decision tree and random forest without CDRSB_bl
-We now look at the performace of other predictors when **remove CDRSB_bl** from the dataset.
+We now look at the performace of other predictors when **removing CDRSB_bl** from the dataset.
 
 ```python
 # Decision tree without CDRSB_bl
@@ -1365,6 +1367,6 @@ Test accuracy of a random forest with 26 trees and max tree depth=3 is : 0.7477.
 Training accuracy of a random forest with 52 trees and max tree depth=4 is : 0.8597.
 Test accuracy of a random forest with 52 trees and max tree depth=3 is : 0.7477. 
 ```
-When we remove CDRSB_bl from the model, the performance dropped significantly, both training and test accuracy. The top three important features that showed in random forest models are **MMSE_bl**, **ADAS13_bl**, and **RAVLT_immediate_bl**. This is consistent with our finding in multinomial logistic regression using Lasso regularization.
+When we removed CDRSB_bl from the model, the performance dropped significantly, both training and test accuracy. The top three important features that showed in random forest models are **MMSE_bl**, **ADAS13_bl**, and **RAVLT_immediate_bl**. This is consistent with our finding in multinomial logistic regression using Lasso regularization.
 
 
