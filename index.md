@@ -18,7 +18,7 @@ ADNI is a global research study that actively supports the investigation and dev
 
 In this multisite longitudinal study, researchers at 63 sites in the US and Canada track the progression of AD in the human brain with **clinical**, **imaging**, **genetic** and **biospecimen biomarkers** through the process of **normal aging/cognitively normal (CN)**, **early mild cognitive impairment (EMCI)**, and **late mild cognitive impairment (LMCI)** to **dementia or AD**. 
 
-The aim of the Alzheimer’s Disease Neuroimaging Initiative (ADNI) study is to track the progression of the disease over different disease stages. The study has **three phases**: **ADNI 1** (five years), **ADNI GO** (two years), and **ADNI 2** (five years). ADNI 1 is the earlies phase.
+The aim of the Alzheimer’s Disease Neuroimaging Initiative (ADNI) study is to track the progression of the disease over different disease stages. The study has **four phases**: **ADNI 1** (five years since 2004), **ADNI GO** (two years since 2009), **ADNI 2** (five years since 2011), and **ADNI 3** (five years since 2016). ADNI 1 is the earlies phase.
 
 **The study population of our project includes participants from ADNI 1 only since our outcome of interest is baseline diagnosis.**
 
