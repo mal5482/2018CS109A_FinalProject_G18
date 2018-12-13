@@ -13,7 +13,7 @@
     * [5) Cerebrospinal fluid (CSF) Biomarkers](#Cerebrospinal-fluid-(CSF)-Biomarkers)<br>
     * [6) Imaging factors](#Imaging-factors)<br>
     * [7) Genetic factors](#Genetic-factors)<br>
-* [3. Summary](#summary)<br> 
+* [3. Choice of Predictors](#summary)<br> 
 * [4. Missing Data](#missing)<br>
 
 ---
