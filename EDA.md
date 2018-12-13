@@ -82,15 +82,14 @@ data_test.to_csv('data_test.csv')
 ## <a name="Outcome"></a> 1) Outcome: Baseline Diagnosis of Alzheimer's Disease
 **The outcome of our study is baseline diagnosis status (categorical).**<br>
 
-**The full dataset include five categories:**<br>
+**The full dataset includes five categories:**<br>
 **CN**: NORMAL AGING/COGNITIVELY NORMAL (ADNI 1/GO/2/3 phase)<br>
 **EMCI**: Early Mild Cognitive Impairment (ADNI GO/2 phase)<br>
 **MCI**: Mild Cognitive Impairment: (ADNI1/3 phase)<br>
 **LMCI**: Late Mild Cognitive Impairment (ADNI GO/2 phase)<br>
-**SMC**: SIGNIFICANT MEMORY CONCERN (ADNI2 phase)<br>
 **AD:** Alzheimer's Disease
 
-**In our dataset, becasue our inclusion criteria, the outcome includes only three categories: CN, AD, and LMCI.**
+**In our dataset, the outcome includes only three categories: CN, AD, and LMCI.**
 
 ```py
 bldx_df=pd.DataFrame(index=['Baseline Diagnosis Prevalence'],columns=['CN','AD','LMCI'])
@@ -100,7 +99,7 @@ bldx_df.LMCI=np.mean(data_train['DX_bl']=='LMCI')
 bldx_df
 ```	
 ```Markdown
-                                CN	      AD         LMCI 
+                                CN	           AD         LMCI 
 Baseline Diagnosis Prevalence	0.294964	  0.230216	   0.47482
 ```
 
