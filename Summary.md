@@ -45,7 +45,7 @@ summary_df['Training Accuracy'] = train_acc_array
 summary_df['Test Accuracy'] = test_acc_array
 
 ```
-**Table 1 - Performance on Training and Test Set of Best Models in Each Classification Method**
+**Table 1** - Performance on Training and Test Set of Best Models in Each Classification Method
 ![summary table](/images/stable.png)
 
 Overall, the models perform pretty well in classifying the three diagnosis status. Except for k-NN model, all other models manage to achieve a test accuracy higher than 87%, and six of them have test accuracy higher than 90%, two higher than 96%.
@@ -56,7 +56,7 @@ The only other model that has a test accuracy over 96% is the **multinomial logi
 
 ### <a name="each-label"></a> 2) Performance of Models on Each Diagnosis Label
 
-**Table 2 - Performance on Test Set for Each Diagnosis Label of Best Models in Each Classification Method**
+**Table 2** - Performance on Test Set for Each Diagnosis Label of Best Models in Each Classification Method
 ![Each label performance](/images/stable_each.png)
 
 The performance of the models on **each label** is also very high, which indicates the reliability of our model.
@@ -87,7 +87,7 @@ In terms of prediction accuracy, we do not see a very strong influence of imputa
 
 The largest different of accuracy between three imputation methods showed up in QDA and AdaBoost, as presented below. These two model also showed a greater discrepancy of training accuracy and test accuracy. For instance, regression imputation drives the training accuracy of AdaBoost up to 1, but the test accuracy remains 0.89. But for models that performs better, the difference between training and test accuracy are very small no matter what imputation methods we used.
 
-**Table 3 - Performance on Training and Test Set for Using Different Imputation Methods of QDA and AdaBoost**
+**Table 3** - Performance on Training and Test Set for Using Different Imputation Methods of QDA and AdaBoost
 ![imputation](/images/imput_models.png)
 
 Although in for some models, simply dropping missing values give us a higher test accuracy (e.g. LDA), we may still prefer mean or regression imputation. Missing values account for around 1/4 of the data in training set and 1/3 in test set, so dropping them would seriously decrease our power and may introduce overfitting problem.
