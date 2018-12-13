@@ -14,6 +14,7 @@
     * [6) Imaging factors](#Imaging-factors)<br>
     * [7) Genetic factors](#Genetic-factors)<br>
 * [3. Summary](#summary)<br> 
+* [4. Missing Data](#missing)<br>
 
 ---
 
@@ -73,7 +74,9 @@ print('The sample size of test set is %.d (%.2f' % (data_test.shape[0],
 data_train.to_csv('data_train.csv')
 data_test.to_csv('data_test.csv')
 ```
+
 ---
+
 ## <a name="Perform-EDA-to-select-potential-predictors"></a> 2. Perform EDA to select potential predictors
 
 ## <a name="Outcome"></a> 1) Outcome: Baseline Diagnosis of Alzheimer's Disease
@@ -400,7 +403,7 @@ We select APOE4 Status as potential predictor.**
 
 ---
 
-## <a name="summary"></a> 3. Summary
+## <a name="summary"></a> 3. Choice of Predictors
 
 **Based on the EDA above, we may first include the following variables as potential predictors for modeling:**
 
@@ -410,6 +413,96 @@ We select APOE4 Status as potential predictor.**
 * Cerebrospinal fluid (CSF) Biomarkers: **ABETA_bl and TAU_bl**;
 * Imaging Brain factors:  **Hippocampus_bl, Entorhinal_bl, Ventricles_bl, MidTemp_bl**;
 * Genetic factors: **APOE4 Status**.
+
+---
+
+## <a name="missing"></a> 4. Missing Data
+
+**We check the missing of our data.**
+```python
+# check missing
+data_total=pd.concat([data_train,data_test],axis=0)
+predictors = ['AGE','gender','married','MH16SMOK','MMSE_bl','RAVLT_learning_bl',
+                     'RAVLT_immediate_bl','RAVLT_perc_forgetting_bl','AVLT_Delay_Rec','ADAS13_bl',
+                    'TMT_PtB_Complete','CDRSB_bl','ABETA_bl_n','TAU_bl_n','Hippocampus_bl','Entorhinal_bl',
+                    'Ventricles_bl','MidTemp_bl','APOE4']
+
+# process some data
+
+def change_gender(x):
+    if x == 'Female':
+        return 1
+    else:
+        return 0
+
+def change_marry(x):
+    if x == 'Married':
+        return 1
+    else:
+        return 0
+
+def change_abeta_bl(x):
+    if x == '>1700':
+        return 1800
+    elif x == '<200':
+        return 100
+    else:
+        return float(x)
+
+def change_tau_bl(x):
+    if x == '<80':
+        return 40
+    else:
+        return float(x)
+
+def change_dx_bl(x):
+    if x == 'CN':
+        return 1
+    elif x == 'AD':
+        return 2
+    else:
+        return 3
+
+def process_data(df):
+    df['gender'] = df.PTGENDER.apply(change_gender)
+    df['married'] = df.PTMARRY.apply(change_marry)
+    df['ABETA_bl_n'] = df.ABETA_bl.apply(change_abeta_bl)
+    df['TAU_bl_n'] = df.TAU_bl.apply(change_tau_bl)
+    df['y'] = df.DX_bl.apply(change_dx_bl)
+    return df
+
+data_modi = process_data(data_total)
+
+data_total_cov=data_modi[['AGE','gender','married','MH16SMOK','MMSE_bl','RAVLT_learning_bl',
+                     'RAVLT_immediate_bl','RAVLT_perc_forgetting_bl','AVLT_Delay_Rec','ADAS13_bl',
+                    'TMT_PtB_Complete','CDRSB_bl','ABETA_bl_n','TAU_bl_n','Hippocampus_bl','Entorhinal_bl',
+                    'Ventricles_bl','MidTemp_bl','APOE4']]
+
+data_total_cov.isnull().sum(axis = 0)
+```
+```Markdown
+AGE                          0
+gender                       0
+married                      0
+MH16SMOK                     0
+MMSE_bl                      0
+RAVLT_learning_bl            1
+RAVLT_immediate_bl           1
+RAVLT_perc_forgetting_bl     2
+AVLT_Delay_Rec               5
+ADAS13_bl                    3
+TMT_PtB_Complete             6
+CDRSB_bl                     0
+ABETA_bl_n                  20
+TAU_bl_n                    20
+Hippocampus_bl              79
+Entorhinal_bl               79
+Ventricles_bl                9
+MidTemp_bl                  79
+APOE4                        0
+dtype: int64
+```
+**We can see the missing of our predictors are not very serious except for ABETA_bl, TAU_bl, Hippocampus_bl, Entorhinal_bl, and MidTemp_bl. This level of missing should not influence our EDA conclusions much. To dealing with the missing values, we used three methods: dropping missing rows, mean imputation, and regression imputation.**
 
 
 
