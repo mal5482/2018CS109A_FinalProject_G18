@@ -35,5 +35,5 @@ Third, it would provide more insights on the treatment of other diseases or comb
 ![picture](/images/AD.png)
 
 ## Research Question:
-**How to diagnosis status at an early stage?**
+**How to diagnosis status at an early stage?**<br>
 To be specific: to solve above question as a classification problem of classifying disease status (**normal aging/cognitively normal (CN)**, **late mild cognitive impairment (LMCI)**, and **AD**) at an early stage using different classification methods combining predictors from different domain, and compare the performance of difference models to select the optimal prediction model. 
