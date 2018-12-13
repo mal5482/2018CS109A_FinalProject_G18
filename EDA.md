@@ -99,8 +99,8 @@ bldx_df.LMCI=np.mean(data_train['DX_bl']=='LMCI')
 bldx_df
 ```	
 ```Markdown
-                                  CN	       AD       LMCI 
-   Baseline Diagnosis Prevalence 0.294964 0.230216 0.47482
+                                    CN	         AD          LMCI 
+   Baseline Diagnosis Prevalence    0.294964    0.230216    0.47482
 ```
 
 ## <a name="Demographics-Characteristics"></a> 2) Demographics Characteristics
