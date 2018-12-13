@@ -11,4 +11,4 @@ Becasue of the limited scope of this project, there are many things left to be d
 
 
 
-##### Acknowledgement to all the professors and TA/TFs for class CS109A.
+##### Acknowledgement to all the professors and TA/TFs for course COMPSCI 109A!
