@@ -347,7 +347,7 @@ for i in range(6):
 ![Imaging](/images/imaging.png)
 
 **Interpretation**
-All the six imaging brain features are pretty normally distributed, except for the Ventricles_bl. We may need to consider to transform it later in analysis.
+All the six imaging brain features are pretty normally distributed, except for the Ventricles_bl. We may need to consider to scale it later in analysis.
 
 ### <a name="2.Box plot"></a> b. Box plot
 ```py
@@ -363,7 +363,7 @@ for i in range(len(img_columns)):
 ![Imaging](/images/imaging_box.png)
 
 **Interpretation**
-Based on the boxplot, we could see that baseline Hippocampus volume and Entorhinal volume is apparently associated with baseline diagnosis. The other four features seem to have different distribution in AD diagnosis but but no in CN and LMCI.
+Based on the boxplot, we could see that baseline Hippocampus volume and Entorhinal volume are apparently associated with baseline diagnosis. The other four features seem to have different distribution in AD diagnosis but no difference in CN and LMCI.
 
 ### <a name="3.Correlation matrix"></a> c. Correlation matrix
 ```py
@@ -501,7 +501,7 @@ MidTemp_bl                  79
 APOE4                        0
 dtype: int64
 ```
-**We can see the missing of our predictors are not very serious except for ABETA_bl, TAU_bl, Hippocampus_bl, Entorhinal_bl, and MidTemp_bl. This level of missing should not influence our EDA conclusions much. To dealing with the missing values, we used three methods: dropping missing rows, mean imputation, and regression imputation.**
+**We can see the missing of our predictors are not very serious except for ABETA_bl, TAU_bl, Hippocampus_bl, Entorhinal_bl, and MidTemp_bl. This level of missing should not influence our EDA conclusions much. To deal with the missing values, we used three methods: dropping missing rows, mean imputation, and regression imputation.**
 
 
 
