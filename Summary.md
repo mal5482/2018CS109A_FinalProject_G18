@@ -81,7 +81,7 @@ The results of these models consistently showed that **CDRSB_bl**, **MMSE_bl**, 
 
 ### <a name="imputation"></a> 2) Influence of Imputation Methods
 
-In terms of prediction accuracy, we do not see a very strong influence of imputation methods overall. 
+In terms of prediction accuracy, we do not see a very strong influence of imputation methods overall. This intuitively make sense because the missing in our data is not serious, and the predictors that plays an important role almost have no missing, based on our results in EDA.
 
 The largest different of accuracy between three imputation methods showed up in QDA and AdaBoost, as presented below. These two model also showed a greater discrepancy of training accuracy and test accuracy. For instance, regression imputation drives the training accuracy of AdaBoost up to 1, but the test accuracy remains 0.89. But for models that performs better, the difference between training and test accuracy are very small no matter what imputation methods we used.
 
