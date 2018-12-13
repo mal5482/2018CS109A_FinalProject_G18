@@ -9,7 +9,7 @@
     * [1) Outcome: Baseline Diagnosis of Alzheimer's Disease](#Outcome)<br>
     * [2) Demographics Characteristics](#Demographics-Characteristics)<br>
     * [3) Lifestyle factors (from medical history dataset)](#Lifestyle-factors)<br>
-    * [4) Neurocognitive/neuropsychological assessments](#Cerebrospinal-fluid-(CSF)-Biomarkers)<br>
+    * [4) Neurocognitive/neuropsychological assessments](#Neurocognitive/neuropsychological-assessments)<br>
     * [5) Cerebrospinal fluid (CSF) Biomarkers](#Cerebrospinal-fluid-(CSF)-Biomarkers)<br>
     * [6) Imaging factors](#Imaging-factors)<br>
     * [7) Genetic factors](#Genetic-factors)<br>
@@ -398,7 +398,7 @@ We select APOE4 Status as potential predictor.**
 
 ---
 
-## <a name="Summary"></a> 3. Summary
+## <a name="summary"></a> 3. Summary
 
 **Based on the EDA above, we may first include the following variables as potential predictors for modeling:**
 
