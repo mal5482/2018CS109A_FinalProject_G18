@@ -75,8 +75,10 @@ data_test.to_csv('data_test.csv')
 ```
 ---
 ## <a name="Perform-EDA-to-select-potential-predictors"></a> 2. Perform EDA to select potential predictors
+
 ## <a name="Outcome"></a> 1) Outcome: Baseline Diagnosis of Alzheimer's Disease
 **The outcome of our study is baseline diagnosis status (categorical).**<br>
+
 **The full dataset include five categories:**<br>
 **CN**: NORMAL AGING/COGNITIVELY NORMAL (ADNI 1/GO/2/3 phase)<br>
 **EMCI**: Early Mild Cognitive Impairment (ADNI GO/2 phase)<br>
@@ -100,8 +102,8 @@ Baseline Diagnosis Prevalence	0.294964	  0.230216	   0.47482
 ```
 
 ## <a name="Demographics-Characteristics"></a> 2) Demographics Characteristics
-**In this part, we look at the distribution of six demographics characteristics within each diagnosis status: **<br>
-Gender, Marital Status, Race, Ethnicity, Age, and Education.
+In this part, we look at the distribution of six demographics characteristics within each diagnosis status: <br>
+**Gender, Marital Status, Race, Ethnicity, Age, and Education**.
 
 ```py
 # plots for demographics characteristics within each baseline diagnosis group
@@ -402,13 +404,12 @@ We select APOE4 Status as potential predictor.**
 
 **Based on the EDA above, we may first include the following variables as potential predictors for modeling:**
 
-* Demographic characteristics: Age, Gender, and Marital Status;
-* Lifestyle factors: Baseline smoking;
-* Neurocognitive/neuropsychological assessments: MMSE_bl, RAVLT_learning_bl, RAVLT_immediate_bl, RAVLT_perc_forgetting_bl, AVLT_Delay_Rec, ADAS13_bl, TMT_PtB_Complete, CDRSB_bl;
-* Cerebrospinal fluid (CSF) Biomarkers: ABETA_bl and TAU_bl;
-* Imaging Brain factors: Hippocampus_bl, Entorhinal_bl, Ventricles_bl, MidTemp_bl;
-* Genetic factors: APOE4 Status.
-
+* Demographic characteristics: *Age, Gender, and Marital Status;
+* Lifestyle factors: *Baseline smoking;
+* Neurocognitive/neuropsychological assessments: *MMSE_bl, RAVLT_learning_bl, RAVLT_immediate_bl, RAVLT_perc_forgetting_bl, AVLT_Delay_Rec, ADAS13_bl, TMT_PtB_Complete, CDRSB_bl;
+* Cerebrospinal fluid (CSF) Biomarkers: *ABETA_bl and TAU_bl;
+* Imaging Brain factors:  *Hippocampus_bl, Entorhinal_bl, Ventricles_bl, MidTemp_bl;
+* Genetic factors: *APOE4 Status.
 
 
 
