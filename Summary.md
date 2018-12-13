@@ -81,6 +81,6 @@ In terms of prediction accuracy, we do not see a very strong influence of imputa
 
 The largest different of accuracy between three imputation methods showed up in QDA and AdaBoost, as presented below. These two model also showed a greater discrepancy of training accuracy and test accuracy. For instance, regression imputation drives the training accuracy of AdaBoost up to 1, but the test accuracy remains 0.89. But for models that performs better, the difference between training and test accuracy are very small no matter what imputation methods we used.
 
-![imputation](/images/impute_models.png)
+![imputation](/images/imput_models.png)
 
 Although in for some models, simply dropping missing values give us a higher test accuracy (e.g. LDA), we may still prefer mean or regression imputation. Missing values account for around 1/4 of the data in training set and 1/3 in test set, so dropping them would seriously decrease our power and may introduce overfitting problem.
