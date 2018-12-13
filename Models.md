@@ -317,7 +317,7 @@ for i in range(3):
 From PCA we could find that for our data, we need large number of principle components to account for a high variance of the total variance in predictors. Considering the size of our dataset and dangerous of overfitting, we did not use PCs to run models.
 
 ### <a name="logistic"></a> 1) Multinomial Logistic Modeling
-We used two regularization methods to run the model: **Ridge** and **Lasso**. They could help us to better understand the importance of features in different settings.
+We used two regularization methods to run the model: **Ridge** and **Lasso**. They could help us better understand the importance of features in different settings.
 
 #### <a name="ridge"></a> a) Multinomial Logistic - Ridge Regularization
 
@@ -468,14 +468,12 @@ lasso_coef_df
 **The predictors that are kept in every model with non-zero coefficients are:**           
 MMSE_bl, RAVLT_immediate_bl, RAVLT_perc_forgetting_bl, ADAS13_bl, CDRSB_bl, ABETA_bl_n, TAU_bl_n, Hippocampus_bl.
 
-Among them, the first five predictors are from neurocognitive/neuropsychological assessments;
-
-ABETA_bl_n and TAU_bl_n are from cerebrospinal fluid (CSF) biomarkers;
-
+Among them, the first five predictors are from neurocognitive/neuropsychological assessments;<br>
+ABETA_bl_n and TAU_bl_n are from cerebrospinal fluid (CSF) biomarkers;<br>
 Hippocampus_bl is from imaging data.
 
 ***Each Label Performance***<br>
-We looked at the prediction accuracy of the best model on each diagnosis label, and we found they still remained high.
+The test accuracy of the best model on each diagnosis label are comparable to the overall accuracy.
 
 ```py
 # prediction accuracy of each label of regression imputation model
@@ -576,7 +574,7 @@ Test accuracy of QDA model: 0.8739
 ```
 
 ***Each Label Performance***<br>
-We looked at the prediction accuracy of the best model on each diagnosis label, and we found they still remained high.
+The test accuracy of the best model on each diagnosis label are comparable to the overall accuracy.
 ```py
 # prediction accuracy of each label of regression imputation model
 print(classification_report(y_trains[2], lda_models[2].predict(X_trains[2])))
@@ -666,7 +664,7 @@ Test accuracy of k-NN model (k=10): 0.7928
 ```
 
 ***Each Label Performance***<br>
-We looked at the prediction accuracy of the best model on each diagnosis label, and we found they still remained high.
+The test accuracy of the best model on each diagnosis label are comparable to the overall accuracy.
 
 ```py
 # prediction accuracy of each label of mean imputation model
@@ -758,7 +756,7 @@ Training accuracy of decision tree (max depth=4): 0.9460
 Test accuracy of decision tree (max depth=4): 0.9189 
 ```
 ***Each Label Performance***<br>
-We looked at the prediction accuracy of the best model on each diagnosis label, and we found they still remained high.
+The test accuracy of the best model on each diagnosis label are comparable to the overall accuracy.
 ```py
 # prediction accuracy of each label of mean imputation model
 print(classification_report(y_trains[1], dt_models[1].predict(X_trains[1])))
@@ -1057,7 +1055,7 @@ Test accuracy of a random forest with 35 trees and max tree depth=4 is : 0.9640.
 ```
 
 ***Each Label Performance***<br>
-We looked at the prediction accuracy of the best model on each diagnosis label, and we found they still remained high.
+The test accuracy of the best model on each diagnosis label are comparable to the overall accuracy.
 
 ```py
 # prediction accuracy of each label of regression imputation model
@@ -1133,7 +1131,7 @@ Test accuracy of Ada boosting model with max tree depth=4 is : 0.8919.
 ```
 
 ***Each Label Performance***<br>
-We looked at the prediction accuracy of the best model on each diagnosis label, and we found they still remained high, expect for the accuracy of the second label (AD).
+The test accuracy of the best model on each diagnosis label are comparable to the overall accuracy, expect for the accuracy of the second label (AD).
 
 ```py
 # prediction accuracy of each label of regression imputation model
