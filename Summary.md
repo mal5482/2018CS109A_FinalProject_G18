@@ -71,10 +71,10 @@ In random forest models, we can tell the feature importance more directly. **CDR
 
 The results of these models consistently showed that **CDRSB_bl**, **MMSE_bl**, **RAVLT_immediate_bl**, and **ADAS13_bl** are predictors that play an important role in prediciting baseline diagnosis for our dataset. This also corresponds well with our finding in literature review. All these four predictors are from neurocognitive/neuropsychological assessments domain. They are tests assessing different facets of cognitive performance, including daily functional ability, severity of cognitive impairment, verbal learning and fluency, and memory.
 
-Our finding indicates that these tests are indeed very relevent and reliable in predicting AD. As these tests could be easily reached online or from physicians, compared to complicated examinations requiring medical instruments, this could be more helpful for individuals who want to apply early self-assessment at home.
+**Our finding indicates that these tests are indeed very relevent and reliable in predicting AD. As these tests could be easily reached online or from physicians, compared to complicated examinations requiring medical instruments, this could be more helpful for individuals who want to apply early self-assessment at home.**
 
 ### Influence of Imputation Methods
 
-In terms of prediction accuracy, we do not see a strong influence 
+In terms of prediction accuracy, we do not see a strong influence of imputation methods.
 
 ###
