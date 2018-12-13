@@ -5,7 +5,11 @@
 ## Contents
 * [1. Summary](#summary)<br>
 * [2. Results](#results)<br>
+  * [1) Overall Performance of Models](#overall)<br>
+  * [2) Performance of Models on Each Diagnosis Label](#each-label)<br>
 * [3. Discussion](#discussion)<br> 
+  * [1) Feature Importance](#feature-importance)<br>
+  * [2) Influence of Imputation Methods](#imputation)<br>
 
 ---
 
@@ -16,7 +20,7 @@
 
 ## <a name="results"></a> 2. Results
 
-### Overall Performance of Models
+### <a name="overall"></a> 1) Overall Performance of Models
 
 ```py
 # create summary table
@@ -49,7 +53,7 @@ The model that performs best is the **random forest model** using regression imp
 
 The only other model that has a test accuracy over 96% is the **multinomial logistic regression** using drop missing imputation, and **lasso regularization**. This model set the coefficient of many predictors to zero and kept only 9 predictors. Actually, when using mean imputation and regression imputation, this model would drop one more predictor (RAVLT_learning_bl) and kept only 8 predictors.
 
-### Performance of Models on Each Diagnosis Label
+### <a name="each-label"></a> 2) Performance of Models on Each Diagnosis Label
 
 ![Each label performance](/images/stable_each.png)
 
@@ -61,7 +65,7 @@ Three of the models have worst performance in predicting CN, and five of them ha
 
 ## <a name="discussion"></a> 3. Discussion
 
-### Feature Importance
+### <a name="feature-importance"></a> 1) Feature Importance
 
 Multinomial logistic regression using lasso regularization, decision tree, and random forest reveal some infomation on the importance of our predictors in this classification process.
 
@@ -75,7 +79,7 @@ The results of these models consistently showed that **CDRSB_bl**, **MMSE_bl**, 
 
 **Our finding indicates that these tests are indeed very relevent and reliable in predicting AD. As these tests could be easily reached online or from physicians, compared to complicated examinations requiring medical instruments, this could be more helpful for individuals who want to apply early self-assessment at home.**
 
-### Influence of Imputation Methods
+### <a name="imputation"></a> 2) Influence of Imputation Methods
 
 In terms of prediction accuracy, we do not see a very strong influence of imputation methods overall. 
 
