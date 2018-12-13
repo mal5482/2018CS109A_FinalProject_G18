@@ -404,12 +404,12 @@ We select APOE4 Status as potential predictor.**
 
 **Based on the EDA above, we may first include the following variables as potential predictors for modeling:**
 
-* Demographic characteristics: *Age, Gender, and Marital Status;
-* Lifestyle factors: *Baseline smoking;
-* Neurocognitive/neuropsychological assessments: *MMSE_bl, RAVLT_learning_bl, RAVLT_immediate_bl, RAVLT_perc_forgetting_bl, AVLT_Delay_Rec, ADAS13_bl, TMT_PtB_Complete, CDRSB_bl;
-* Cerebrospinal fluid (CSF) Biomarkers: *ABETA_bl and TAU_bl;
-* Imaging Brain factors:  *Hippocampus_bl, Entorhinal_bl, Ventricles_bl, MidTemp_bl;
-* Genetic factors: *APOE4 Status.
+* Demographic characteristics: **Age, Gender, and Marital Status**;
+* Lifestyle factors: **Baseline smoking**;
+* Neurocognitive/neuropsychological assessments: **MMSE_bl, RAVLT_learning_bl, RAVLT_immediate_bl, RAVLT_perc_forgetting_bl, AVLT_Delay_Rec, ADAS13_bl, TMT_PtB_Complete, CDRSB_bl**;
+* Cerebrospinal fluid (CSF) Biomarkers: **ABETA_bl and TAU_bl**;
+* Imaging Brain factors:  **Hippocampus_bl, Entorhinal_bl, Ventricles_bl, MidTemp_bl**;
+* Genetic factors: **APOE4 Status**.
 
 
 
