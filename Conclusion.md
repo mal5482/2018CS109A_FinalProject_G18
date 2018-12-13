@@ -6,6 +6,8 @@ Our study showed the possibility of using baseline predictors to predict the bas
 
 There are interesing findings in terms of important predictors. Our study identified CDRSB_bl, MMSE_bl, RAVLT_immediate_bl, and ADAS13_bl four important features in classification of cognitive normal (CN), late mild cognitive impairment (LMCI), and Alzheimer’s Disease (AD). These predictors are all from neurocognitive/neuropsychological assessments and are easily accessible for everyone. The demonstration of their contribution in prediction suggests the possibility to use these neurocognitive/neuropsychological questionnaires to do self-assessment of AD at home.
 
+### Future Work
+
 Becasue of the limited scope of this project, there are many things left to be discovered in the future on this topic, including but not limited to: the importance of predictor in domains other than neurocognitive/neuropsychological assessments and prediction for multiple and longer phases within the same individuals; comparison of the questionnarie and assessment of the validlitiy and reliability of these neuroognitive/neuropsychological assessments; larger and more comprehensive datasets; more classification models, etc.
 
 
