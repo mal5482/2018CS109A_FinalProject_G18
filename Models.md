@@ -1369,4 +1369,3 @@ Test accuracy of a random forest with 52 trees and max tree depth=3 is : 0.7477.
 ```
 When we remove CDRSB_bl from the model, the performance dropped significantly, both training and test accuracy. The top three important features that showed in random forest models are **MMSE_bl**, **ADAS13_bl**, and **RAVLT_immediate_bl**. This is consistent with our finding in multinomial logistic regression using Lasso regularization.
 
-
